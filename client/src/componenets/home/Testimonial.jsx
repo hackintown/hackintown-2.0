@@ -47,7 +47,7 @@ const Testimonial = () => {
             <div className="testimonial-details">
               <div className="testimonial-item">
                 <figure>
-                  <img src="./images/prabhat-wildstone.jpeg" alt="triller-app" />
+                  <img src="/images/prabhat-wildstone.jpeg" alt="triller-app" />
                 </figure>
                 <figcaption className="fig-caption">
                   <h2>Akki Chaudhari</h2>
@@ -64,7 +64,7 @@ const Testimonial = () => {
             <div className="testimonial-details">
               <div className="testimonial-item">
                 <figure>
-                <img src="./images/prabhat-wildstone.jpeg" alt="triller-app" />
+                <img src="/images/prabhat-wildstone.jpeg" alt="triller-app" />
                 </figure>
                 <figcaption className="fig-caption">
                   <h2>Sarang Gupta</h2>
@@ -81,7 +81,7 @@ const Testimonial = () => {
             <div className="testimonial-details">
               <div className="testimonial-item">
                 <figure>
-                <img src="./images/prabhat-wildstone.jpeg" alt="triller-app" />
+                <img src="/images/prabhat-wildstone.jpeg" alt="triller-app" />
                 </figure>
                 <figcaption className="fig-caption">
                   <h2>Virat Kumar Singh</h2>
@@ -98,7 +98,7 @@ const Testimonial = () => {
             <div className="testimonial-details">
               <div className="testimonial-item">
                 <figure>
-                <img src="./images/prabhat-wildstone.jpeg" alt="triller-app" />
+                <img src="/images/prabhat-wildstone.jpeg" alt="triller-app" />
                 </figure>
                 <figcaption className="fig-caption">
                   <h2>Akhilendra Sahu</h2>

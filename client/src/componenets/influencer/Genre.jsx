@@ -7,19 +7,19 @@ const Genre = () => {
       <div className="container">
         <div className={GenreStyle.genre_wrap}>
           <div className={GenreStyle.genre_info}>
-            <img src="./images/camp-stat-icon.png" alt="brand_work_icon" />
+            <img src="/images/camp-stat-icon.png" alt="brand_work_icon" />
             <div className={GenreStyle.info_wrap}>
               <h2>PLAN YOUR CONTENT STRATEGY</h2>
             </div>
           </div>
           <div className={GenreStyle.genre_info}>
-            <img src="./images/influ-search-icon.png" alt="brand_work_icon" />
+            <img src="/images/influ-search-icon.png" alt="brand_work_icon" />
             <div className={GenreStyle.info_wrap}>
               <h2>DISCOVER INFLUENCERS</h2>
             </div>
           </div>
           <div className={GenreStyle.genre_info}>
-            <img src="./images/hire-influ-icon.png" alt="brand_work_icon" />
+            <img src="/images/hire-influ-icon.png" alt="brand_work_icon" />
             <div className={GenreStyle.info_wrap}>
               <h2>HIRE THE BEST INFLUENCERS</h2>
             </div>
@@ -33,7 +33,7 @@ const Genre = () => {
             <div className={GenreStyle.gn_grid}>
               <div className={GenreStyle.genres_supp_item}>
                 <figure>
-                  <img src="./images/beauty-icon.png" alt="Influencers" />
+                  <img src="/images/beauty-icon.png" alt="Influencers" />
                 </figure>
                 <div className={GenreStyle.idn_img_txt}>
                   <span>Fashion &amp; Beauty</span>
@@ -44,7 +44,7 @@ const Genre = () => {
               <div className={GenreStyle.genres_supp_item}>
                 <figure>
                   <img
-                    src="./images/entertainment-icon.png"
+                    src="/images/entertainment-icon.png"
                     alt="Influencers"
                   />
                 </figure>
@@ -56,7 +56,7 @@ const Genre = () => {
             <div className={GenreStyle.gn_grid}>
               <div className={GenreStyle.genres_supp_item}>
                 <figure>
-                  <img src="./images/travel-icon.png" alt="Influencers" />
+                  <img src="/images/travel-icon.png" alt="Influencers" />
                 </figure>
                 <div className={GenreStyle.idn_img_txt}>
                   <span>Travel &amp; Lifestyle</span>
@@ -66,7 +66,7 @@ const Genre = () => {
             <div className={GenreStyle.gn_grid}>
               <div className={GenreStyle.genres_supp_item}>
                 <figure>
-                  <img src="./images/tech-icon.png" alt="Influencers" />
+                  <img src="/images/tech-icon.png" alt="Influencers" />
                 </figure>
                 <div className={GenreStyle.idn_img_txt}>
                   <span>Technology</span>
@@ -76,7 +76,7 @@ const Genre = () => {
             <div className={GenreStyle.gn_grid}>
               <div className={GenreStyle.genres_supp_item}>
                 <figure>
-                  <img src="./images/motivation-icon.png" alt="Influencers" />
+                  <img src="/images/motivation-icon.png" alt="Influencers" />
                 </figure>
                 <div className={GenreStyle.idn_img_txt}>
                   <span>Motivational</span>
@@ -86,7 +86,7 @@ const Genre = () => {
             <div className={GenreStyle.gn_grid}>
               <div className={GenreStyle.genres_supp_item}>
                 <figure>
-                  <img src="./images/game-icon.png" alt="Influencers" />
+                  <img src="/images/game-icon.png" alt="Influencers" />
                 </figure>
                 <div className={GenreStyle.idn_img_txt}>
                   <span>Gaming</span>
@@ -96,7 +96,7 @@ const Genre = () => {
             <div className={GenreStyle.gn_grid}>
               <div className={GenreStyle.genres_supp_item}>
                 <figure>
-                  <img src="./images/fitness-icon.png" alt="Influencers" />
+                  <img src="/images/fitness-icon.png" alt="Influencers" />
                 </figure>
                 <div className={GenreStyle.idn_img_txt}>
                   <span>Sports &amp; fitness</span>
@@ -106,7 +106,7 @@ const Genre = () => {
             <div className={GenreStyle.gn_grid}>
               <div className={GenreStyle.genres_supp_item}>
                 <figure>
-                  <img src="./images/finance-icon.png" alt="Influencers" />
+                  <img src="/images/finance-icon.png" alt="Influencers" />
                 </figure>
                 <div className={GenreStyle.idn_img_txt}>
                   <span>Business &amp; Finance</span>
@@ -116,7 +116,7 @@ const Genre = () => {
             <div className={GenreStyle.gn_grid}>
               <div className={GenreStyle.genres_supp_item}>
                 <figure>
-                  <img src="./images/music-icon.png" alt="Influencers" />
+                  <img src="/images/music-icon.png" alt="Influencers" />
                 </figure>
                 <div className={GenreStyle.idn_img_txt}>
                   <span>Dance &amp; Music</span>
@@ -126,7 +126,7 @@ const Genre = () => {
             <div className={GenreStyle.gn_grid}>
               <div className={GenreStyle.genres_supp_item}>
                 <figure>
-                  <img src="./images/food-icon.png" alt="Influencers" />
+                  <img src="/images/food-icon.png" alt="Influencers" />
                 </figure>
                 <div className={GenreStyle.idn_img_txt}>
                   <span>Food</span>

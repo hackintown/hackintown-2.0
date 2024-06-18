@@ -19,21 +19,21 @@ const Datascore = () => {
       <div className="container">
         <div className={DataStyle.our_data_wrap}>
           <div className={DataStyle.data_wrap}>
-            <img src="./images/brands-work-icon.png" alt="brand-work-icon" />
+            <img src="/images/brands-work-icon.png" alt="brand-work-icon" />
             <div className={DataStyle.info_wrap}>
               <h2><Number n ={100}/>+</h2>
               <span>Brands work with Hackintown</span>
             </div>
           </div>
           <div className={DataStyle.data_wrap}>
-            <img src="./images/influ-earn-icon.png" alt="brand-work-icon" />
+            <img src="/images/influ-earn-icon.png" alt="brand-work-icon" />
             <div className={DataStyle.info_wrap}>
             <h2><Number n ={10000}/>+</h2>
               <span>Influencers earn with Hackintown</span>
             </div>
           </div>
           <div className={DataStyle.data_wrap}>
-            <img src="./images/camp-del-icon.png" alt="brand-work-icon" />
+            <img src="/images/camp-del-icon.png" alt="brand-work-icon" />
             <div className={DataStyle.info_wrap}>
             <h2><Number n ={95}/>%</h2>
               <span>Campaigns delivered niche content at Scale</span>

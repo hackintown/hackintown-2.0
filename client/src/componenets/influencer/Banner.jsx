@@ -27,12 +27,12 @@ const Banner = () => {
                   <div className={InfluencerStyle.image_wrap}>
                     <img
                       className={InfluencerStyle.star_card}
-                      src="./images/aashna-hegde-img.png"
+                      src="/images/aashna-hegde-img.png"
                       loading="lazy"
                     />
                     <img
                       className={InfluencerStyle.star_card_overlay}
-                      src="./images/aashna-hegde.png"
+                      src="/images/aashna-hegde.png"
                       loading="lazy"
                     />
                   </div>
@@ -41,12 +41,12 @@ const Banner = () => {
                   <div className={InfluencerStyle.image_wrap}>
                     <img
                       className={InfluencerStyle.star_card}
-                      src="./images/awez-darbar-img.png"
+                      src="/images/awez-darbar-img.png"
                       loading="lazy"
                     />
                     <img
                       className={InfluencerStyle.star_card_overlay}
-                      src="./images/awez-darbar-overlay.png"
+                      src="/images/awez-darbar-overlay.png"
                       loading="lazy"
                     />
                   </div>
@@ -55,12 +55,12 @@ const Banner = () => {
                   <div className={InfluencerStyle.image_wrap}>
                     <img
                       className={InfluencerStyle.star_card}
-                      src="./images/third-card-img.png"
+                      src="/images/third-card-img.png"
                       loading="lazy"
                     />
                     <img
                       className={InfluencerStyle.star_card_overlay}
-                      src="./images/third-card-icon.png"
+                      src="/images/third-card-icon.png"
                       loading="lazy"
                     />
                   </div>

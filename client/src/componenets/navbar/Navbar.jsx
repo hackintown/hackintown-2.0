@@ -20,7 +20,14 @@ const Navbar = () => {
     }
     setIsMenuClicked(!isMenuClicked);
   };
-
+  // Close the menu when a menu item is clicked
+  const closeMenu = () => {
+    if (isMenuClicked) {
+      setBurgerClass("burger-bar unclicked");
+      setMenuClass("menu hidden");
+      setIsMenuClicked(false);
+    }
+  };
   return (
     <header className="header">
       <div className="container">
@@ -30,38 +37,38 @@ const Navbar = () => {
           </Link>
           <div className="brand-logo hide-show">
             <span className="header-text">
-            Over 100+ delighted clients globally to Fortune 100 companies.
+              Over 100+ delighted clients globally to Fortune 100 companies.
             </span>
             <div className="brands-slider">
               <figure>
-                <img src="./images/logo-01.png" />
+                <img src="/images/logo-01.png" />
               </figure>
               <figure>
-                <img src="./images/logo-02.png" />
+                <img src="/images/logo-02.png" />
               </figure>
               <figure>
-                <img src="./images/logo-03.png" />
+                <img src="/images/logo-03.png" />
               </figure>
               <figure>
-                <img src="./images/logo-04.png" />
+                <img src="/images/logo-04.png" />
               </figure>
               <figure>
-                <img src="./images/logo-05.png" />
+                <img src="/images/logo-05.png" />
               </figure>
               <figure>
-                <img src="./images/logo-06.png" />
+                <img src="/images/logo-06.png" />
               </figure>
               <figure>
-                <img src="./images/logo-07.png" />
+                <img src="/images/logo-07.png" />
               </figure>
               <figure>
-                <img src="./images/logo-08.png" />
+                <img src="/images/logo-08.png" />
               </figure>
               <figure>
-                <img src="./images/logo-09.png" />
+                <img src="/images/logo-09.png" />
               </figure>
               <figure>
-                <img src="./images/logo-10.png" />
+                <img src="/images/logo-10.png" />
               </figure>
             </div>
           </div>
@@ -90,43 +97,45 @@ const Navbar = () => {
                 <Link to="/">Contact Us</Link>
               </li>
               <li className="menu-list">
-              <Link className="influencer-btn" to="/influencer">Influencer Marketing</Link>
+                <Link className="influencer-btn" to="/influencer" onClick={closeMenu}>
+                  Influencer Marketing
+                </Link>
               </li>
             </ul>
             <div className="brand-logo">
               <span className="header-text">
-              Over 100+ delighted clients globally to Fortune 100 companies.
+                Over 100+ delighted clients globally to Fortune 100 companies.
               </span>
               <div className="brands-slider">
                 <figure>
-                  <img src="./images/logo-01.png" />
+                  <img src="/images/logo-01.png" />
                 </figure>
                 <figure>
-                  <img src="./images/logo-02.png" />
+                  <img src="/images/logo-02.png" />
                 </figure>
                 <figure>
-                  <img src="./images/logo-03.png" />
+                  <img src="/images/logo-03.png" />
                 </figure>
                 <figure>
-                  <img src="./images/logo-04.png" />
+                  <img src="/images/logo-04.png" />
                 </figure>
                 <figure>
-                  <img src="./images/logo-05.png" />
+                  <img src="/images/logo-05.png" />
                 </figure>
                 <figure>
-                  <img src="./images/logo-06.png" />
+                  <img src="/images/logo-06.png" />
                 </figure>
                 <figure>
-                  <img src="./images/logo-07.png" />
+                  <img src="/images/logo-07.png" />
                 </figure>
                 <figure>
-                  <img src="./images/logo-08.png" />
+                  <img src="/images/logo-08.png" />
                 </figure>
                 <figure>
-                  <img src="./images/logo-09.png" />
+                  <img src="/images/logo-09.png" />
                 </figure>
                 <figure>
-                  <img src="./images/logo-10.png" />
+                  <img src="/images/logo-10.png" />
                 </figure>
               </div>
             </div>
