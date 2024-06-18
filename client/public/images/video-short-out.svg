@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffe35f"/>
+      <stop offset="0" stop-color="#de9f17"/>
+      <stop offset="0.32" stop-color="#cf9a15"/>
+      <stop offset="0.68" stop-color="#ffd44e"/>
+      <stop offset="1" stop-color="#ffcf45"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_294" data-name="Rectangle 294" width="54" height="54" rx="4" transform="translate(-83.934 66.658)" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="video-short-out" transform="translate(83.934 -66.658)" clip-path="url(#clip-path)">
+    <path id="_001-video-camera-with-play-button" data-name="001-video-camera-with-play-button" d="M51.75,13.453a3.645,3.645,0,0,0-3.972.79l-6.944,6.945V16.955A5.459,5.459,0,0,0,35.375,11.5H5.459A5.459,5.459,0,0,0,0,16.955v20.09A5.459,5.459,0,0,0,5.459,42.5H35.375a5.459,5.459,0,0,0,5.459-5.459V32.812l6.944,6.945A3.645,3.645,0,0,0,54,37.179V16.821A3.645,3.645,0,0,0,51.75,13.453ZM25.657,28.414l-7.441,5.717a1.783,1.783,0,0,1-2.87-1.414V21.283a1.783,1.783,0,0,1,2.87-1.414l7.441,5.716a1.783,1.783,0,0,1,0,2.829Z" transform="translate(-83.934 66.658)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

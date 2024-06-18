@@ -1,0 +1,156 @@
+.top_influ_sec{
+    padding: 40px 0;
+    position: relative;
+}
+.heading h2{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-family: 'HelveticaNowDisplay';
+}
+/* 0ur latest work */
+
+/*Fade Hover Effect*/
+.slider a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #333;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .slider:hover img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0.5)";
+    filter: alpha(opacity=0.5);
+    opacity: 0.5;
+  }
+  
+  .slider a h2 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 55% 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-background-size: 3px 3px;
+    -moz-background-size: 3px 3px;
+    background-size: 3px 3px;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  
+  .slider:hover a h2 {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+  }
+  
+  .slider .text_white {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  
+  .text_white h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'HelveticaNowDisplay';
+  }
+  
+  .slider:hover .text_white {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    filter: alpha(opacity=1);
+    opacity: 1;
+  }
+  .second_slide_wrap{
+    padding: 20px 0;
+  }
+  @media screen and (min-width:479px) {
+    .top_influ_sec{
+        padding: 50px 0;
+        position: relative;
+    }
+    .heading h2{
+    font-size: 2.5rem;
+    margin-bottom: 45px;
+    }
+    .text_white h3 {
+        font-size: 2.5rem;
+      }
+      .second_slide_wrap{
+        padding: 25px 0;
+      }
+  }
+  @media screen and (min-width:767px) {
+    .top_influ_sec{
+      padding: 70px 0 50px;
+  }
+    .heading h2{
+        font-size: 3rem;
+        margin-bottom: 50px;
+        }
+    .text_white h3 {
+        font-size: 2.8rem;
+      }
+      .second_slide_wrap{
+        padding: 30px 0;
+      }
+  }
+  @media screen and (min-width:1123px) {
+    .top_influ_sec{
+      padding: 90px 0 50px;
+  }
+  .second_slide_wrap{
+    padding: 35px 0;
+  }
+  }

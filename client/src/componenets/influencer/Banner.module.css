@@ -1,0 +1,130 @@
+.banner_section{
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    position: relative;
+    padding: 48px 0px;
+    transition: all 0.3s linear;
+    z-index: 1;
+}
+/* .banner_section::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000000 100%);
+    mix-blend-mode: multiply;
+} */
+.banner_content h1{
+    text-align: center;
+    font-size: 2.3rem;
+    color: #fff;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    font-family: "HelveticaNowDisplay";
+}
+.banner_content span{
+    text-align: center;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.3;
+    display: block;
+    font-family: "HelveticaNowDisplay";
+}
+.btn_wrap{
+    text-align: center;
+    margin-top: 30px;
+}
+.btn_wrap .btn{
+    margin-right: 12px;
+    padding: 10px 12px;
+}
+.btn_wrap .btn:hover{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-in-out;
+}
+/* exclusive influencer */
+.exclusive_sec{
+    margin-top: 50px;
+}
+.exclusive_info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: space-between;
+}
+.exclusive_info_item{
+    flex: 200px;
+}
+.image_wrap{
+    width: 100%;
+    position: relative;
+}
+.image_wrap .star_card_overlay{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.star_card_overlay{
+    opacity: 0;
+    transition: .6s ease-in;
+}
+.star_card_overlay:hover{
+    opacity: 1;
+}
+@media screen and (min-width:479px) {
+    .banner_content h1{
+        font-size: 3.2rem;
+    }
+    .banner_content{
+        top: 55px;
+    }
+    .btn_wrap{
+        margin-top: 40px;
+    }
+}
+@media screen and (min-width:767px) {
+    .banner_section{
+        padding: 75px 0px 50px;
+    }
+    .banner_content span{
+        font-size: 1.8rem;
+    }
+    .btn_wrap .btn{
+        margin-right: 30px;
+        padding: 13px 35px;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    .exclusive_sec {
+        margin-top: 70px;
+      }
+}
+@media screen and (min-width:1023px) {
+    .banner_section{
+        padding: 85px 0px 50px;
+    }
+    .banner_content h1{
+        font-size: 3.8rem;
+    }
+    .btn_wrap {
+        margin-top: 55px;
+      }
+      .exclusive_sec {
+        margin-top: 90px;
+      }
+}
+@media screen and (min-width:1199px) {
+    .banner_content h1{
+        font-size: 4.5rem;
+    }
+}

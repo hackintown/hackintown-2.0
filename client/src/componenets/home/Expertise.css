@@ -1,0 +1,129 @@
+.our-expertise {
+  padding: 35px 0;
+  position: relative;
+}
+.heading-wrap {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.heading-wrap h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 6px;
+  font-family: "HelveticaNowDisplay";
+  font-weight: 900;
+}
+.heading-wrap p {
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "HelveticaNowDisplay";
+  font-weight: 300;
+}
+/* Slider */
+.card {
+  width: 100%;
+  height: 193px;
+  border-radius: 20px;
+  position: relative;
+}
+.graphics-cover {
+  background-color: #4d3b44;
+}
+.website-cover {
+  background-color: #35314d;
+}
+.application-cover {
+  background-color: #0a3037;
+}
+.influencer-cover {
+  background-color: #004173;
+}
+.maintenence-cover {
+  background-color: #7e4b0a;
+}
+.assurance-cover {
+  background-color: #171738;
+}
+.slick-slide {
+  padding: 0 8px;
+}
+.our-expertise .slick-arrow {
+  display: none !important;
+}
+
+.expertise-wrap {
+  margin-top: 28px;
+}
+.expertise-details {
+  margin-right: 8px;
+  border-radius: 20px;
+}
+.expertisein-item {
+  height: 193px;
+  position: relative;
+  border-radius: 20px;
+}
+.c1{
+  background-color: #4B3942;
+}
+.c2{
+  background-color: #35314D;
+}
+.c3{
+  background-color: #0A3037;
+}
+.c4{
+  background-color: #004173;
+}
+.c5{
+  background-color: #7E4B0A;
+}
+.c6{
+  background-color: #171738;
+}
+.expertisein-item-name {
+  color: #fff;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 1.6rem;
+  font-family: "HelveticaNowDisplay";
+  font-weight: 400;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.expertise-icons {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 479px) {
+  .our-expertise {
+    padding: 45px 0;
+  }
+  .heading-wrap h2 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+  .heading-wrap p {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .our-expertise {
+    padding: 60px 0;
+  }
+  .heading-wrap h2 {
+    font-size: 3rem;
+  }
+  .heading-wrap p {
+    font-size: 1.6rem;
+  }
+  .expertise-wrap {
+    margin-top: 48px;
+  }
+}

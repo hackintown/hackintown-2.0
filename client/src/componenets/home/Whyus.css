@@ -1,0 +1,35 @@
+.why-hackintown {
+  padding: 25px 0;
+}
+.why-hackintown .whyus-heading-wrap {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.whyus-heading-wrap h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 6px;
+  font-family: "HelveticaNowDisplay";
+  font-weight: 900;
+}
+.whyus-heading-wrap p {
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "HelveticaNowDisplay";
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 479px) {
+  .whyus-heading-wrap h2 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+  .whyus-heading-wrap p {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (min-width:767px) {
+  .whyus-heading-wrap p{
+    margin-bottom: 30px;
+  } 
+}

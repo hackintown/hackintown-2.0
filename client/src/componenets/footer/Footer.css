@@ -1,0 +1,266 @@
+/* footer */
+.footer-section {
+  background-color: #0d0c0c;
+  position: relative;
+  padding: 20px 0 0;
+}
+
+.footer-cta .row {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #373636;
+}
+
+.fa-icon {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.cta-text span {
+  color: #7c7c7c;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "HelveticaNowDisplay";
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+.footer-logo {
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  max-width: 95px;
+  background-color: #f7ed51;
+}
+
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 1.6rem;
+  color: #7c7c7c;
+  line-height: 1.3;
+}
+
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "HelveticaNowDisplay";
+  margin-bottom: 20px;
+}
+
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.footer-social-icon i:hover{
+    border: 1px solid  #f7ed51;
+    box-shadow: 0 0 8px  #ffffff;
+    transition: all 0.3s;
+}
+.instagram-bg {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+.linkedin-bg {
+  background-color: #2797cf;
+}
+.facebook-bg {
+  background: #3689f3;
+}
+
+.twitter-bg {
+  background: #28a8e7;
+}
+
+.google-bg {
+  background: #dd4b39;
+}
+
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+
+.footer-widget ul li {
+  width: 50%;
+  margin-bottom: 12px;
+  list-style: none;
+}
+
+.footer-widget ul li a:hover {
+  color: #ff5e14;
+}
+
+.footer-widget ul li a {
+  color: #7c7c7c;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "HelveticaNowDisplay";
+}
+
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2e2e2e;
+  border: 1px solid #2e2e2e;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+.subscribe-form button {
+  position: absolute;
+  right: 0;
+  background: #f7ed51;
+  padding: 10px 20px;
+  border: 1px solid #ff5e14;
+  top: 0;
+  bottom: 0;
+}
+
+.subscribe-form button .fa-telegram {
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+
+.copyright-area {
+  background: #202020;
+  padding: 25px 0;
+}
+
+.copyright-text p {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #878787;
+}
+
+.copyright-text p a {
+  color: #fff;
+}
+
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer-menu li:hover a {
+  color: #ff5e14;
+}
+
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+
+.footer-section .single-cta {
+  display: flex;
+}
+
+.primary-info {
+  margin: 10px 5px 8px;
+}
+
+.footer-widget {
+  margin-bottom: 18px;
+}
+
+/* contact-us-page */
+.contact-us {
+  padding: 105px 0 35px;
+}
+.map {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.contact-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-us h1 {
+  color: #151414;
+  font-weight: 600;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: "HelveticaNowDisplay";
+  text-transform: uppercase;
+}
+@media screen and (min-width: 400px) {
+  .primary-info {
+    width: 47%;
+  }
+}
+@media screen and (min-width: 575px) {
+  .primary-info {
+    width: 31%;
+  }
+  .footer-section .single-cta {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffe35f"/>
+      <stop offset="0" stop-color="#de9f17"/>
+      <stop offset="0.32" stop-color="#cf9a15"/>
+      <stop offset="0.68" stop-color="#ffd44e"/>
+      <stop offset="1" stop-color="#ffcf45"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_294" data-name="Rectangle 294" width="54" height="54" rx="4" transform="translate(-83.934 66.658)" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="dm-on-indtagram" transform="translate(83.934 -66.658)" clip-path="url(#clip-path)">
+    <g id="_002-instagram" data-name="002-instagram" transform="translate(-83.934 66.658)">
+      <g id="Group_926" data-name="Group 926">
+        <g id="Group_925" data-name="Group 925">
+          <path id="Path_1380" data-name="Path 1380" d="M42.7,9.992A1.311,1.311,0,1,0,44.008,11.3,1.313,1.313,0,0,0,42.7,9.992Z" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <g id="Group_928" data-name="Group 928">
+        <g id="Group_927" data-name="Group 927">
+          <path id="Path_1381" data-name="Path 1381" d="M27,15.378A11.622,11.622,0,1,0,38.622,27,11.635,11.635,0,0,0,27,15.378Z" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+      <g id="Group_930" data-name="Group 930">
+        <g id="Group_929" data-name="Group 929">
+          <path id="Path_1382" data-name="Path 1382" d="M39.2,0H14.8A14.82,14.82,0,0,0,0,14.8V39.2A14.82,14.82,0,0,0,14.8,54H39.2A14.82,14.82,0,0,0,54,39.2V14.8A14.82,14.82,0,0,0,39.2,0ZM27,41.811A14.811,14.811,0,1,1,41.811,27,14.828,14.828,0,0,1,27,41.811ZM42.7,15.8a4.5,4.5,0,1,1,4.5-4.5A4.505,4.505,0,0,1,42.7,15.8Z" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

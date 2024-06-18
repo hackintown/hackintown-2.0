@@ -1,0 +1,36 @@
+.discover_sec{
+    background: url(/public/images/bore-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 65px 0;
+}
+.discover_info h2{
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'HelveticaNowDisplay';
+    font-weight: 500;
+    margin-bottom: 0;
+}
+@media screen and (min-width:479px) {
+    .discover_info h2{
+        font-size: 3rem;
+    }
+}
+@media screen and (min-width:767px) {
+    .discover_info h2{
+        font-size: 3.5rem;
+        font-weight: 600;
+    }
+    .discover_sec{
+        padding: 140px 0;
+    }
+}
+@media screen and (min-width:1023px) {
+    .discover_info h2{
+        font-size: 5rem;
+        font-weight: 900;
+    }
+    .discover_sec{
+        padding: 180px 0;
+    }
+}

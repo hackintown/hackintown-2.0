@@ -1,0 +1,63 @@
+.services_section {
+  position: relative;
+  margin-top: -40px;
+}
+
+.services_wrap {
+  background:url(/public/images/services-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 26px 35px;
+  border-radius: 10px;
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(255,255,255,0.75);
+-moz-box-shadow: 0px 0px 1px 2px rgba(255,255,255,0.75);
+box-shadow: 0px 0px 1px 1px rgba(255,255,255,0.75);
+  position: relative;
+}
+.service_content {
+  width: 216.167px;
+  margin: 0 auto;
+  display: flex;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.service_img {
+  margin-right: 15px;
+  max-width: 40px;
+  filter: brightness(1);
+}
+.service_title {
+  font-size: 1.5rem;
+  font-family: 'HelveticaNowDisplay';
+  font-weight: 400;
+}
+.get_now {
+  color: #ffbf00;
+  font-size: 1.4rem;
+  font-family: 'HelveticaNowDisplay';
+  font-weight: 400;
+}
+.slick_arrow {
+  width: 50px;
+  position: relative;
+}
+
+.slick_prev {
+  position: absolute;
+  width: 25px;
+  top: 50%;
+  left: -30px;
+}
+.slick_next {
+  position: absolute;
+  width: 25px;
+  top: 50%;
+  right: -30px;
+}
+@media screen and (min-width:1199px) {
+  .services_section {
+    margin-top: -85px;
+  }
+}
