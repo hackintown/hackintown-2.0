@@ -9,7 +9,7 @@ services:
       - key: MONGODB_URI
         value: mongodb+srv://hackintown:mkDir123%40%23Xm@social-media-cluster.zpynntr.mongodb.net/auth
       - key: JWT_SECRET
-        value: myjwtsecret
+        value: mysecretkey
   - type: static
     name: hackintown-client
     env: static
