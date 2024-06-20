@@ -24,7 +24,7 @@ const corsOptions = {
   maxAge: 86400, // cache preflight response for 24 hours
 };
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // Enable pre-flight requests for all routes
+app.options("*", cors(corsOptions)); // Enable pre-flight requests for all routes
 app.use(require("helmet")());
 app.use(morgan("combined")); // Add Morgan for logging
 app.use(limiter);
@@ -45,7 +45,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Something broke!");
 });
-
+const PORT = process.env.PORT || 5500;
 // Start Server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
