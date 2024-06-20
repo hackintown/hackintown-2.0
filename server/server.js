@@ -14,17 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Allow only your front-end URL for CORS
-
-const corsOptions = {
-  origin: ["https://hackintown-v2-0-static.onrender.com"],
-  credentials: true,
-  methods: ["GET", "POST", "DELETE", "OPTIONS"], // specify allowed methods
-  allowedHeaders: ["Content-Type", "Authorization"], // specify allowed headers
-  maxAge: 86400, // cache preflight response for 24 hours
-};
-app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // Enable pre-flight requests for all routes
+app.use(cors());
 app.use(require("helmet")());
 app.use(morgan("combined")); // Add Morgan for logging
 app.use(limiter);
@@ -32,6 +22,13 @@ app.use(limiter);
 // MongoDB Connection
 connectToDatabase(MONGODB_URI);
 
+//Testing the Server
+app.get("/", (req, res) => {
+  return res.json({
+    success: true,
+    message: "Your server is up and running..",
+  });
+});
 // Routes
 app.use("/api/auth", authRoutes);
 
