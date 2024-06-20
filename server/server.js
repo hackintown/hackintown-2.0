@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const { PORT, MONGODB_URI } = require("./config/config.jsx");
 const authRoutes = require("./routes/authRoutes.jsx");
 const authenticateToken = require("./middleware/authenticateToken.jsx");
@@ -10,10 +11,8 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(require("cors")());
-app.use(
-  cors({
-    origin: "https://hackintown-v2-0-static.onrender.com", // Allow only your front-end URL
+app.use(cors({
+    origin: process.env.CLIENT_URL,// Allow only your front-end URL
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
