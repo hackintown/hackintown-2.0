@@ -6,6 +6,7 @@ const authRoutes = require("./routes/authRoutes.jsx");
 const authenticateToken = require("./middleware/authenticateToken.jsx");
 const limiter = require("./middleware/express-rate-limit.jsx");
 const { connectToDatabase } = require("./utils/db.js");
+const morgan = require("morgan");
 
 const app = express();
 
