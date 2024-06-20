@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: hackintown-server
+    env: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://hackintown:mkDir123%40%23Xm@social-media-cluster.zpynntr.mongodb.net/auth
+      - key: JWT_SECRET
+        value: myjwtsecret
+  - type: static
+    name: hackintown-client
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/dist
