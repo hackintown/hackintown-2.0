@@ -32,8 +32,10 @@ app.use(limiter);
 
 // MongoDB Connection
 mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  //useNewUrlParser: true,
+  //useUnifiedTopology: true,
+  useCreateIndex: true, // Add useCreateIndex option if needed
+  useFindAndModify: false, // Add useFindAndModify option if needed
 });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
