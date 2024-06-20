@@ -19,7 +19,8 @@
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.1",
-    "mongosh": "^2.2.9"
+    "mongosh": "^2.2.9",
+    "morgan": "^1.10.0"
   },
   "description": "",
   "devDependencies": {
