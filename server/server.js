@@ -11,12 +11,22 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-    origin: process.env.CLIENT_URL,// Allow only your front-end URL
-    methods: "GET,POST,PUT,DELETE",
-    credentials: true,
-  })
-);
+// Allow only your front-end URL for CORS
+const allowedOrigins = [process.env.CLIENT_URL || 'https://hackintown-v2-0-static.onrender.com'];
+
+const corsOptions = {
+    origin: function (origin, callback) {
+        // Check if the origin is in the allowed list, or if it's undefined (e.g., from non-browser clients)
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+};
+app.use(cors(corsOptions));
 app.use(require("helmet")());
 app.use(limiter);
 
