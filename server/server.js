@@ -10,11 +10,14 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-  origin: 'https://hackintown-v2-0-static.onrender.com', // Allow only your front-end URL
-  methods: 'GET,POST,PUT,DELETE',
-  credentials: true
-}));
+app.use(require("cors")());
+app.use(
+  cors({
+    origin: "https://hackintown-v2-0-static.onrender.com", // Allow only your front-end URL
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
+  })
+);
 app.use(require("helmet")());
 app.use(limiter);
 

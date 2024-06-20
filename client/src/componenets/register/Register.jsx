@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Register.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import config from "../../config";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -14,7 +15,7 @@ const Register = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", {
+      const response = await axios.post(`${config.apiBaseUrl}/auth/register`, {
         email,
         password,
       });

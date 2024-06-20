@@ -10,8 +10,9 @@ services:
         value: mongodb+srv://hackintown:mkDir123%40%23Xm@social-media-cluster.zpynntr.mongodb.net/auth
       - key: JWT_SECRET
         value: mysecretkey
+      - key: CLIENT_URL
+        value: https://hackintown-v2-0-static.onrender.com
   - type: static
     name: hackintown-client
-    env: static
     buildCommand: cd client && npm install && npm run build
     staticPublishPath: client/dist
