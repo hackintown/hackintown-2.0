@@ -17,13 +17,14 @@ app.use(express.urlencoded({ extended: true }));
 // Allow only your front-end URL for CORS
 
 const corsOptions = {
-  origin: process.env.CLIENT_URL || "https://hackintown-v2-0-static.onrender.com",
+  origin: ["https://hackintown-v2-0-static.onrender.com"],
   credentials: true,
   methods: ["GET", "POST", "DELETE", "OPTIONS"], // specify allowed methods
   allowedHeaders: ["Content-Type", "Authorization"], // specify allowed headers
   maxAge: 86400, // cache preflight response for 24 hours
 };
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // Enable pre-flight requests for all routes
 app.use(require("helmet")());
 app.use(morgan("combined")); // Add Morgan for logging
 app.use(limiter);
