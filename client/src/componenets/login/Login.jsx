@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import axios from "axios";
 import config from "../../config";
@@ -108,7 +108,7 @@ const Login = () => {
         </button>
 
         <p className={styles.p}>
-          Don't have an account? <span className={styles.span}>Sign Up</span>
+          Don't have an account? <span className={styles.span}  onClick={() => navigate("/register")}>Sign Up</span>
         </p>
 
         <p className={`${styles.p} ${styles.line}`}>Or With</p>
