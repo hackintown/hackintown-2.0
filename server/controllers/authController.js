@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-const User = require("../models/user.jsx");
-const { JWT_SECRET } = require("../config/config.jsx");
+const User = require("../models/user.js");
+const { JWT_SECRET } = require("../config/config.js");
 
 // Register Function:
 // Extracts email and password from the request body.

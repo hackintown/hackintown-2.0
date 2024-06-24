@@ -1,10 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const { PORT, MONGODB_URI } = require("./config/config.jsx");
-const authRoutes = require("./routes/authRoutes.jsx");
-const authenticateToken = require("./middleware/authenticateToken.jsx");
-const limiter = require("./middleware/express-rate-limit.jsx");
+const { PORT, MONGODB_URI } = require("./config/config.js");
+const authRoutes = require("./routes/authRoutes.js");
+const authenticateToken = require("./middleware/authenticateToken.js");
+const limiter = require("./middleware/express-rate-limit.js");
 const { connectToDatabase } = require("./utils/db.js");
 const morgan = require("morgan");
 

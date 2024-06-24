@@ -24,8 +24,8 @@ export default function Banner() {
             content, and laser_sharp paid media targeting.
           </p>
           <div className={styles.btn_wrap}>
-            <Link to='/' className={`${styles.btn} btn`}>Sign Up</Link>
-            <Link to='/' className={`${styles.btn} btn`}>Login</Link>
+            <Link to='/register' className={`${styles.btn} btn`}>Sign Up</Link>
+            <Link to='/login' className={`${styles.btn} btn`}>Login</Link>
           </div>
           </div>
           <div className={styles.banner_right}>

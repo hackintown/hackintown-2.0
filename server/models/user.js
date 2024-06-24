@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET } = require("../config/config.jsx");
+const { JWT_SECRET } = require("../config/config.js");
 
 const userSchema = new mongoose.Schema(
   {
@@ -19,6 +19,7 @@ const userSchema = new mongoose.Schema(
       required: [true, "Password is required"],
       minlength: [8, "Password must be at least 8 characters long"], //Ensures a minimum length of 8 characters.
     },
+    googleId: String,
   },
   { timestamps: true } //Adds createdAt and updatedAt fields automatically.
 );
