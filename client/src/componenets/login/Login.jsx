@@ -19,7 +19,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post(`${config.apiBaseUrl}/auth/login`, {
+      const response = await axios.post(`${config.apiBaseUrl}/api/auth/login`, {
         email,
         password,
       });
