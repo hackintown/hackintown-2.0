@@ -34,7 +34,24 @@ const Login = () => {
       setLoading(false);
     }
   };
-
+  const handleGoogleLogin = async () => {
+    try {
+      const googleAuthUrl = `${config.apiBaseUrl}/api/auth/google`;
+  
+      // Open Google OAuth in a new tab
+      const googleWindow = window.open(googleAuthUrl, "_blank");
+  
+      if (!googleWindow) {
+        throw new Error("Failed to open Google authentication window.");
+      }
+  
+      // Focus on the new tab (optional)
+      googleWindow.focus();
+    } catch (error) {
+      console.error("Google login failed:", error);
+      // Handle error or display a message to the user
+    }
+  };
   return (
     <div className="container flex justify-center">
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -124,7 +141,10 @@ const Login = () => {
         <p className={`${styles.p} ${styles.line}`}>Or With</p>
 
         <div className={`${styles["flex-row"]}`}>
-          <button className={`${styles.btn} ${styles.google}`}>
+          <button
+            className={`${styles.btn} ${styles.google}`}
+            onClick={handleGoogleLogin}
+          >
             <svg
               version="1.1"
               width="20"

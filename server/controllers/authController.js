@@ -1,7 +1,4 @@
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
-const User = require("../models/user.js");
-const { JWT_SECRET } = require("../config/config.js");
+const User = require("../models/user");
 
 // Register Function:
 // Extracts email and password from the request body.
@@ -21,8 +18,8 @@ const register = async (req, res) => {
 
     user = new User({ email, password });
     await user.save();
-
-    res.status(201).json({ msg: "User registered successfully" });
+    const token = user.generateJWT();
+    res.status(201).json({ token });
   } catch (error) {
     console.error(error);
     res.status(500).json({ msg: "Error registering user" });
@@ -45,19 +42,24 @@ const login = async (req, res) => {
   try {
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(404).json({ msg: "User not found" });
+      return res.status(400).json({ msg: "Invalid email or password" });
     }
 
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
-      return res.status(401).json({ msg: "Invalid credentials" });
+      return res.status(400).json({ msg: "Invalid email or password" });
     }
 
     const token = user.generateJWT();
-    res.json({ token });
+    res.status(200).json({ token });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ msg: "Error logging in" });
+    res.status(500).json({ error: error.message });
   }
 };
-module.exports = { register, login };
+
+const googleLoginCallback = (req, res) => {
+  const token = req.user.generateJWT();
+  res.redirect(`${CLIENT_URL}/auth/callback?token=${token}`);
+};
+module.exports = { register, login, googleLoginCallback };

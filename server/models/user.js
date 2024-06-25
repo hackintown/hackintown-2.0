@@ -19,7 +19,6 @@ const userSchema = new mongoose.Schema(
       required: [true, "Password is required"],
       minlength: [8, "Password must be at least 8 characters long"], //Ensures a minimum length of 8 characters.
     },
-    googleId: String,
   },
   { timestamps: true } //Adds createdAt and updatedAt fields automatically.
 );
