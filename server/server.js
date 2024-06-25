@@ -17,7 +17,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({ origin: CLIENT_URL, credentials: true }));
+app.use(cors());
 app.use(require("helmet")());
 app.use(morgan("combined")); // Add Morgan for logging
 app.use(limiter);
