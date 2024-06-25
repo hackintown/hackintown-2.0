@@ -1,0 +1,144 @@
+.banner {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 100px 0 50px;
+}
+.banner:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  background: url(https://barcodeent.com/wp-content/themes/Barcode/assets/img/about-brand-bg.png)
+    no-repeat;
+  background-size: cover;
+  height: 632px;
+}
+.banner:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 632px;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000 100%);
+  mix-blend-mode: multiply;
+  width: 100%;
+}
+.brand-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 0 80px;
+}
+.downarrow {
+  width: 16px;
+  height: 89px;
+  position: relative;
+  cursor: pointer;
+}
+.brand-form-wrap h3 {
+  font-size: 30px;
+  overflow: hidden;
+  margin: 0 0 30px;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.brand-content p {
+    color: #fff;
+    overflow: hidden;
+    line-height: 30px;
+    font-weight: 700;
+    font-size: 2.1rem;
+    margin: 0 0 30px;
+}
+.brd-group-1 {
+  position: relative;
+  background: linear-gradient(
+    93.35deg,
+    rgba(255, 255, 255, 0.12) -0.24%,
+    rgba(255, 255, 255, 0.06) 59.82%
+  );
+  border-radius: 10px;
+  padding: 20px 64px;
+  margin: 0 0 200px;
+}
+.brd-form-group {
+  position: relative;
+  float: left;
+  width: 48%;
+  margin: 0 0 50px;
+}
+.brd-form-group-camp {
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+.brd-inputbox {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 300;
+  overflow: hidden;
+  background: 0 0;
+  font-family: "mont";
+}
+.brd-group-2, .brd-group-3, .brd-group-4, .brd-group-5, .brd-group-6 {
+    position: relative;
+    margin: 0 0 160px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .banner {
+    padding: 56px 0 50px;
+  }
+  .brd-group-1 {
+    padding: 20px;
+    margin: 0 0 60px;
+  }
+  .brand-content p,
+  .brd-inputbox {
+    font-size: 18px;
+  }
+  .brd-group-2,
+  .brd-group-3,
+  .brd-group-4,
+  .brd-group-5,
+  .brd-group-6 {
+    margin: 0 0 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .downarrow {
+    width: 12px;
+    height: 30px;
+  }
+  .downarrow svg {
+    width: 100%;
+  }
+  .brd-form-group {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+  .brand-contact-form label {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .brand-form-wrap h3 {
+    font-size: 22px;
+    margin: 0 0 14px;
+  }
+}

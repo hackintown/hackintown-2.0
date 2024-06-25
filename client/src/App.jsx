@@ -10,6 +10,7 @@ import Influencer from "./pages/Influencer";
 import Footer from "./componenets/footer/Footer";
 import Login from "./componenets/login/Login";
 import Register from "./componenets/register/Register";
+import BrandContact from './pages/BrandContact'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/influencer" element={<Influencer />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/contact-us" element={<BrandContact />} />
         </Routes>
         <Footer />
       </BrowserRouter>
