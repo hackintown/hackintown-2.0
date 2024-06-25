@@ -13,7 +13,7 @@ const Banner = () => {
             We connect brands with Instagram,Youtube and Short Form Video apps.
           </span>
           <div className={InfluencerStyle.btn_wrap}>
-            <Link to="/login" className={`${InfluencerStyle.btn} btn`}>
+            <Link to="/contact-us" className={`${InfluencerStyle.btn} btn`}>
               I'm a brand
             </Link>
             <Link to="/influencer" className={`${InfluencerStyle.btn} btn`}>

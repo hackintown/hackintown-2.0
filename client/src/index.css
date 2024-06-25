@@ -337,3 +337,8 @@ input, textarea, select{
 .slick-dots{
 	display: none !important;
 }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
