@@ -5,6 +5,16 @@ const { JWT_SECRET } = require("../config/config.js");
 
 const userSchema = new mongoose.Schema(
   {
+    fname: {
+     type: String,
+     required: [true, "First Name is required"],
+     trim: true,
+    },
+    lname: {
+      type: String,
+      required: [true, "Last Name is required"],
+      trim: true,
+    },
     email: {
       type: String, //Data type (String).
       required: [true, "Email is required"], // Mandatory field with a custom error message.

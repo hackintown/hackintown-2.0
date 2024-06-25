@@ -21,10 +21,16 @@ const Register = () => {
     setLoading(true);
     try {
       const response = await axios.post(`${config.apiBaseUrl}/auth/register`, {
+        fname,
+        lname,
         email,
         password,
       });
       setMessage("Registration successful! Please log in.");
+      setFname("");
+      setLname("");
+      setEmail("");
+      setPassword("");
       navigate("/login"); // Redirect to the login page after registration
     } catch (error) {
       console.error(
@@ -72,7 +78,7 @@ const Register = () => {
                 type="text"
                 className={styles.input}
                 id="lname"
-                value={email}
+                value={lname}
                 onChange={(e) => setLname(e.target.value)}
                 required
                 placeholder="Enter Last Name"

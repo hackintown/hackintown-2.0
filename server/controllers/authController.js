@@ -9,7 +9,7 @@ const User = require("../models/user");
 // Catches and logs any errors, responding with a 500 status.
 
 const register = async (req, res) => {
-  const { email, password } = req.body;
+  const {fname, lname, email, password } = req.body;
   try {
     let user = await User.findOne({ email });
     if (user) {
