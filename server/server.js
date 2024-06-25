@@ -22,6 +22,7 @@ app.use(require("helmet")());
 app.use(morgan("combined")); // Add Morgan for logging
 app.use(limiter);
 
+const SESSION_SECRET = config.SESSION_SECRET;
 //Session
 app.use(
   session({
@@ -34,6 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // MongoDB Connection
+const MONGODB_URI = config.MONGODB_URI
 connectToDatabase(MONGODB_URI);
 
 //Testing the Server
@@ -57,7 +59,7 @@ app.use((err, req, res, next) => {
   res.status(500).send("Something broke!");
 });
 
-const PORT = config.PORT;
+const port = config.PORT;
 
 // Start Server
 app.listen(port, () => {
