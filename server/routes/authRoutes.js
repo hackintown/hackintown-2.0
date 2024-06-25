@@ -2,6 +2,7 @@ const express = require("express");
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
 const { register, login } = require("../controllers/authController.js");
+const { CLIENT_URL } = require("../config/config.js");
 const router = express.Router();
 
 // Route: POST /api/auth/register
@@ -17,15 +18,16 @@ router.get(
 );
 
 //Google Callback Route:
-router.get('/google/callback',
-    passport.authenticate('google', { failureRedirect: '/' }),
-    (req, res) => {
-      // Successful authentication, redirect home with token or handle as needed
-      const token = req.user.generateJWT();  // Assuming generateJWT is a method on your User model
-      res.redirect(`${CLIENT_URL}/auth/callback?token=${token}`);
-    }
-  );
-  
+router.get(
+  "/google/callback",
+  passport.authenticate("google", { failureRedirect: "/" }),
+  (req, res) => {
+    // Successful authentication, redirect home with token or handle as needed
+    const token = req.user.generateJWT(); // Assuming generateJWT is a method on your User model
+    res.redirect(`${CLIENT_URL}/influencer?token=${token}`);
+  }
+);
+
 //Logout
 router.get("/logout", (req, res) => {
   req.logout(function (err) {
@@ -35,4 +37,3 @@ router.get("/logout", (req, res) => {
 });
 
 module.exports = router;
-

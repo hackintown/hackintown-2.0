@@ -12,22 +12,26 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: `${CLIENT_URL}/api/auth/google/callback`,
+      callbackURL: `${CLIENT_URL}/influencer`,
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
         let user = await User.findOne({ email: profile._json.email });
         if (!user) {
           // Create a new user if not found
+          const hashedPassword = await bcrypt.hash(profile.id, 10);
           user = new User({
             email: profile._json.email,
-            password: bcrypt.hashSync(profile.id, 10),
+            password: hashedPassword,
           });
           await user.save();
         }
-        return done(null, user);
+        const token = jwt.sign({ userId: user._id }, JWT_SECRET, {
+          expiresIn: "1h",
+        });
+        return done(null, { user, token });
       } catch (err) {
-        console.error(err);
+        console.error("Error during Google authentication:", err);
         return done(err, null);
       }
     }
@@ -40,8 +44,11 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser((id, done) => {
   User.findById(id, (err, user) => {
-    done(err, user);
+    if (err) {
+      console.error("Error deserializing user:", err);
+      return done(err, null);
+    }
+    done(null, user);
   });
 });
-
 module.exports = passport;
