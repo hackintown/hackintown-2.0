@@ -1,11 +1,18 @@
 import React from "react";
 import styles from "./Banner.module.css";
+import SelectInfluencers from "./SelectInfluencers";
+import Objectives from "./Objectives";
+import TimelineCamp from "./TimelineCamp";
+import Discover from "./Discover";
+import Industry from "./Industry";
+import Budget from "./Budget";
+import BrandForm from "./BrandForm";
 
 const Banner = () => {
   return (
     <section className={styles.banner}>
       <div className="container">
-        <div className={`${styles["banner-content-wrap"]} relative`}>
+        <div className={`${styles["banner-content-wrap"]} relative z-10`}>
           <div className={styles["brand-content"]}>
             <p className="text-white text-2xl font-semibold mx-auto mb-10">
               We're happy to have you on board with us. Please share the details
@@ -14,7 +21,7 @@ const Banner = () => {
             </p>
             <a
               href="/"
-              class={styles.downarrow}
+              className={styles.downarrow}
               onclick="scrollToSection('brand-contact-form')"
             >
               <svg
@@ -68,8 +75,22 @@ const Banner = () => {
                     ></textarea>
                   </div>
                 </div>
-                <div className={`${styles["brd-group-2"]} clearfix`}>
-                <h3>SELECT INFLUENCER MARKETING PLATFORMS</h3>
+                <SelectInfluencers />
+                <Objectives />
+                <TimelineCamp />
+                <Discover />
+                <Industry />
+                <Budget />
+                <p
+                  className="mb-16 text-3xl lg:text-4xl max-w-[600px]"
+                  style={{ lineHeight: "1.4" }}
+                >
+                  Kindly drop in your contact details so we can start working on
+                  building a concrete campaign for your Brand.
+                </p>
+                <BrandForm />
+                <div className={styles["btn_wrap"]}>
+                  <button className={`${styles.btn} btn`}>SUBMIT</button>
                 </div>
               </form>
             </div>

@@ -22,7 +22,6 @@
   left: 0;
   top: 0;
   height: 632px;
-  z-index: -1;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000 100%);
   mix-blend-mode: multiply;
   width: 100%;
@@ -47,12 +46,12 @@
   text-transform: uppercase;
 }
 .brand-content p {
-    color: #fff;
-    overflow: hidden;
-    line-height: 30px;
-    font-weight: 700;
-    font-size: 2.1rem;
-    margin: 0 0 30px;
+  color: #fff;
+  overflow: hidden;
+  line-height: 30px;
+  font-weight: 700;
+  font-size: 2.1rem;
+  margin: 0 0 30px;
 }
 .brd-group-1 {
   position: relative;
@@ -76,6 +75,9 @@
   width: 100%;
   clear: both;
 }
+input[placeholder] {
+  text-overflow: ellipsis;
+}
 .brd-inputbox {
   position: relative;
   display: block;
@@ -89,16 +91,19 @@
   background: 0 0;
   font-family: "mont";
 }
-.brd-group-2, .brd-group-3, .brd-group-4, .brd-group-5, .brd-group-6 {
-    position: relative;
-    margin: 0 0 160px;
+.btn_wrap .btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: all 0.3s;
 }
-
-
-
-
-
-
+.btn_wrap .btn {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0 auto;
+  padding: 7px 28px;
+  display: flex;
+}
 @media screen and (max-width: 1024px) {
   .banner {
     padding: 56px 0 50px;
@@ -111,11 +116,7 @@
   .brd-inputbox {
     font-size: 18px;
   }
-  .brd-group-2,
-  .brd-group-3,
-  .brd-group-4,
-  .brd-group-5,
-  .brd-group-6 {
+  .brd-group-1 {
     margin: 0 0 40px;
   }
 }

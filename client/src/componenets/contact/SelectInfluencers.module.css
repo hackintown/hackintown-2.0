@@ -1,0 +1,97 @@
+.influ-list {
+  position: relative;
+}
+.brd-group-2 {
+  position: relative;
+  margin: 0 0 160px;
+}
+.brd-group-2 h3 {
+  margin: 20px 0 50px;
+}
+.influ-list ul {
+  margin: 0 -15px;
+}
+
+.influ-list ul li {
+  float: left;
+  width: 16.66%;
+  padding: 0 15px;
+}
+
+.influ-list ul li .influ-item {
+  position: relative;
+}
+
+.influ-list ul li .influ-item-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.influ-list ul li .influ-item img {
+  position: relative;
+  z-index: 1;
+  height: 28px;
+  width: auto;
+}
+
+.influ-list ul li .influ-item a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: #3e3e3e;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.influ-list ul li .influ-item a {
+  -moz-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.influ-list ul li .influ-item a.active .influ-item-bg,
+.influ-list ul li .influ-item a:hover .influ-item-bg {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+
+@media screen and (max-width: 599px) {
+  .influ-list ul li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .influ-list ul li,
+  .tp-grid {
+    width: 50%;
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .brd-group-2 {
+    margin: 0 0 40px;
+  }
+  .influ-list ul li {
+    width: 33.33%;
+    margin: 0 0 15px;
+  }
+}

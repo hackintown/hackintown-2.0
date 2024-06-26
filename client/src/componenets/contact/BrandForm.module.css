@@ -1,0 +1,67 @@
+.brd-group-8 {
+  position: relative;
+  background: linear-gradient(
+    93.35deg,
+    rgba(255, 255, 255, 0.12) -0.24%,
+    rgba(255, 255, 255, 0.06) 59.82%
+  );
+  border-radius: 10px;
+  padding: 20px 64px;
+  margin: 0 0 60px;
+}
+.brd-group-8 .brd-form-group {
+  margin: 0 0 20px;
+}
+.brd-form-group {
+  position: relative;
+  float: left;
+  width: 48%;
+  margin: 0 0 50px;
+}
+input[placeholder] {
+  text-overflow: ellipsis;
+}
+.brd-inputbox {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 23px;
+  font-weight: 300;
+  overflow: hidden;
+  background: 0 0;
+  font-family: "mont";
+}
+.brd-group-8 .brd-form-group {
+  margin: 0 0 20px;
+}
+
+.lets-right {
+  float: right;
+}
+.brd-form-group {
+  position: relative;
+  float: left;
+  width: 48%;
+  margin: 0 0 50px;
+}
+.lets-right {
+  float: right;
+}
+@media screen and (max-width: 1024px) {
+  .brd-group-8 p,
+  .brd-inputbox {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  label {
+    font-size: 16px;
+  }
+  .brd-form-group {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+}
