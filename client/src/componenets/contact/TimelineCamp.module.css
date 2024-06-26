@@ -1,0 +1,66 @@
+.brd-group-4 h3 {
+  margin: 20px 0 60px;
+}
+.brd-group-4 {
+  position: relative;
+  margin: 0 0 160px;
+}
+.timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.timeline-step .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #fff;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.timeline-step.active .circle {
+  background-color: red; /* Active color */
+  border-color: #fff;
+}
+
+.timeline-step span {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.timeline-container:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #fff;
+  z-index: -1;
+}
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  background-color: red;
+  z-index: -1;
+  transition: width 0.3s;
+}
+@media screen and (max-width: 1024px) {
+  .brd-group-4 {
+    margin: 0 0 40px;
+  }
+}

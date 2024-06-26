@@ -1,0 +1,80 @@
+.brd-group-5 {
+  position: relative;
+  margin: 0 0 160px;
+}
+.brd-group-5 h3 {
+  margin: 20px 0 60px;
+}
+.disc-creat-list {
+  position: relative;
+}
+
+.disc-creat-list ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  text-align: center;
+}
+
+.disc-creat-list ul li {
+  flex: 1 0 152px;
+  padding: 0 15px;
+  margin: 0 0 30px;
+}
+
+.disc-creat-list ul li a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+  background: #3e3e3e;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  align-self: center;
+  justify-content: center;
+}
+
+.disc-creat-list ul li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.disc-creat-list ul li a.active {
+  transform: scale(0.9);
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #000;
+}
+.disc-creat-list ul {
+  margin: 0 -15px;
+}
+@media screen and (max-width: 1024px) {
+  .disc-creat-list ul li {
+    margin: 0 0 15px;
+  }
+  .brd-group-5 {
+    margin: 0 0 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .disc-creat-list ul li a {
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .disc-creat-list ul li a {
+    font-size: 16px;
+  }
+}
