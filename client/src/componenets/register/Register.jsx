@@ -30,7 +30,6 @@ const Register = () => {
       setLname("");
       setEmail("");
       setPassword("");
-      navigate("/login"); // Redirect to the login page after registration
     } catch (error) {
       console.error("Registration failed:", error);
     } finally {

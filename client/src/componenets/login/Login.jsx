@@ -25,7 +25,7 @@ const Login = () => {
     try {
       await dispatch(loginUser({ email, password }));
       setLoading(false);
-      navigate("/");
+
     } catch (error) {
       setLoading(false);
       console.error("Login Failed:", error);
