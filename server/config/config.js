@@ -9,6 +9,8 @@ const config = {
     GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
     SESSION_SECRET: process.env.SESSION_SECRET,
+    razorpayKeyId: process.env.RAZORPAY_KEY_ID,
+    razorpayKeySecret: process.env.RAZORPAY_KEY_SECRET,
   },
   production: {
     MONGODB_URI: process.env.MONGODB_URI,
@@ -18,6 +20,8 @@ const config = {
     GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
     SESSION_SECRET: process.env.SESSION_SECRET,
+    razorpayKeyId: process.env.RAZORPAY_KEY_ID,
+    razorpayKeySecret: process.env.RAZORPAY_KEY_SECRET,
   },
 };
 const environment = process.env.NODE_ENV || "development";

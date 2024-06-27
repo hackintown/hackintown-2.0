@@ -11,6 +11,9 @@ const authenticateToken = require("./middleware/authenticateToken.js");
 const limiter = require("./middleware/express-rate-limit.js");
 const { connectToDatabase } = require("./utils/db.js");
 require("./config/passport.js");
+const paymentRoutes  = require("./routes/paymentRoutes.js");
+const errorHandler = require('./middleware/errorHandler.js');
+const requestLogger = require("./middleware/requestLogger.js");
 
 const app = express();
 
@@ -47,6 +50,11 @@ app.get("/", (req, res) => {
 });
 // Routes
 app.use("/api/auth", router);
+
+//Payment Routes
+app.use('/api/payment', paymentRoutes);
+app.use(errorHandler);
+app.use(requestLogger);
 
 // Protected route example
 app.get("/protected", authenticateToken, (req, res) => {
