@@ -9,14 +9,23 @@ const User = require("../models/user");
 // Catches and logs any errors, responding with a 500 status.
 
 const register = async (req, res) => {
-  const {fname, lname, email, password } = req.body;
+  const { fname, lname, email, password } = req.body;
   try {
     let user = await User.findOne({ email });
     if (user) {
       return res.status(400).json({ msg: "User already exists" });
     }
-
-    user = new User({ email, password });
+    if (!fname || !lname || !password) {
+      return res
+        .status(400)
+        .json({ message: "First Name, Last Name, and Password are required." });
+    }
+    if (password.length < 8) {
+      return res
+        .status(400)
+        .json({ message: "Password must be at least 8 characters long." });
+    }
+    user = new User({ fname, lname, email, password });
     await user.save();
     const token = user.generateJWT();
     res.status(201).json({ token });

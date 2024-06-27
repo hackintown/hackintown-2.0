@@ -3,13 +3,17 @@ import { Navigate, useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import axios from "axios";
 import config from "../../config";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "../../features/auth/authSlice";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState("");
+  const dispatch = useDispatch();
+  const error = useSelector((state) => state.auth.error);
+  const successMessage = useSelector((state) => state.auth.successMessage);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -19,32 +23,28 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post(`${config.apiBaseUrl}/api/auth/login`, {
-        email,
-        password,
-      });
-      setMessage(`Login successful! Token: ${response.data.token}`);
-      localStorage.setItem("token", response.data.token); // Store the JWT token
-      console.log("Loggged In Successfully");
-      navigate("/");
-    } catch (error) {
-      console.error("Login failed:", error.response?.data || error.message);
-      setMessage(`Login failed: ${error.response?.data?.msg || error.message}`);
-    } finally {
+      await dispatch(loginUser({ email, password }));
       setLoading(false);
+
+    } catch (error) {
+      setLoading(false);
+      console.error("Login Failed:", error);
     }
+  };
+  const handleClearError = () => {
+    dispatch(clearError());
   };
   const handleGoogleLogin = async () => {
     try {
       const googleAuthUrl = `${config.apiBaseUrl}/api/auth/google`;
-  
+
       // Open Google OAuth in a new tab
       const googleWindow = window.open(googleAuthUrl, "_blank");
-  
+
       if (!googleWindow) {
         throw new Error("Failed to open Google authentication window.");
       }
-  
+
       // Focus on the new tab (optional)
       googleWindow.focus();
     } catch (error) {
@@ -122,7 +122,8 @@ const Login = () => {
           </div>
           <span className={styles.span}>Forgot password?</span>
         </div>
-
+        {error && <p className={styles.error}>{error}</p>}
+        {successMessage && <p className={styles.success}>{successMessage}</p>}
         <button
           type="submit"
           className={styles["button-submit"]}
