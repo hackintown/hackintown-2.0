@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import styles from "./Banner.module.css";
 import SelectInfluencers from "./SelectInfluencers";
@@ -104,4 +102,3 @@ const Banner = () => {
 };
 
 export default Banner;
->>>>>>> parent of 596019f (alignments-update)
