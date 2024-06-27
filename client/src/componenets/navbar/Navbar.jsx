@@ -82,7 +82,7 @@ const Navbar = () => {
           <nav className={menu_class}>
             <ul className="menu-listing">
               <li className="menu-list">
-                <Link to="/">Services</Link>
+                <Link to="/services">Services</Link>
               </li>
               <li className="menu-list">
                 <Link to="/">Industries</Link>
