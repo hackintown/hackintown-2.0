@@ -3,20 +3,16 @@ import styles from "./Register.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import config from "../../config";
-import { useDispatch, useSelector } from "react-redux";
-import { registerUser } from "../../features/auth/authSlice";
 
 const Register = () => {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const error = useSelector((state) => state.auth.error);
-  const successMessage = useSelector((state) => state.auth.successMessage);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -24,21 +20,31 @@ const Register = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await dispatch(registerUser({ fname, lname, email, password }));
-      setLoading(false);
+      const response = await axios.post(`${config.apiBaseUrl}/auth/register`, {
+        fname,
+        lname,
+        email,
+        password,
+      });
+      setMessage("Registration successful! Please log in.");
       setFname("");
       setLname("");
       setEmail("");
       setPassword("");
+      navigate("/login"); // Redirect to the login page after registration
     } catch (error) {
-      console.error("Registration failed:", error);
+      console.error(
+        "Registration failed:",
+        error.response?.data || error.message
+      );
+      setMessage(
+        `Registration failed: ${error.response?.data || error.message}`
+      );
     } finally {
       setLoading(false);
     }
   };
-  const handleClearError = () => {
-    dispatch(clearError());
-  };
+
   return (
     <div className="container flex justify-center">
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -146,8 +152,7 @@ const Register = () => {
           </div>
           <span className={styles.span}>Forgot password?</span>
         </div>
-        {error && <p className={styles.error}>{error}</p>}
-        {successMessage && <p className={styles.success}>{successMessage}</p>}
+
         <button
           type="submit"
           className={styles["button-submit"]}
@@ -242,6 +247,7 @@ const Register = () => {
           </button>
         </div>
       </form>
+      {message && <p>{message}</p>}
     </div>
   );
 };

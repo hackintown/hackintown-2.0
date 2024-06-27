@@ -6,7 +6,7 @@
 }
 .genre_sec::before {
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   top: 0;
   right: 0;
@@ -26,9 +26,6 @@
 .genre_info {
   flex: 200px;
   text-align: center;
-}
-.genre_info img {
-  margin: 0 auto;
 }
 .info_wrap {
   margin: 10px 0;
