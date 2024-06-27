@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Banner.module.css";
 import SelectInfluencers from "./SelectInfluencers";
 import Objectives from "./Objectives";
@@ -9,6 +9,15 @@ import Budget from "./Budget";
 import BrandForm from "./BrandForm";
 
 const Banner = () => {
+  const scrollRef = useRef(null);
+
+  const scrollToSection = (e) => {
+    e.preventDefault();
+    if (scrollRef.current) {
+      scrollRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className={styles.banner}>
       <div className="container">
@@ -19,11 +28,7 @@ const Banner = () => {
               of your brief and someone from our Amazing team will get back to
               you shortly!
             </p>
-            <a
-              href="/"
-              className={styles.downarrow}
-              onclick="scrollToSection('brand-contact-form')"
-            >
+            <a href="/" className={styles.downarrow} onClick={scrollToSection}>
               <svg
                 width="16"
                 height="59"
@@ -38,7 +43,11 @@ const Banner = () => {
               </svg>
             </a>
           </div>
-          <div className={styles["brand-form-wrap"]} id="brand-contact-form">
+          <div
+            className={styles["brand-form-wrap"]}
+            id="brand-contact-form"
+            ref={scrollRef}
+          >
             <h3>About Your Brand</h3>
             <div className={styles["brand-contact-form"]}>
               <form
