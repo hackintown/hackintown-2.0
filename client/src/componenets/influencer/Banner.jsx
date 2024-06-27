@@ -2,7 +2,6 @@ import React from "react";
 import InfluencerStyle from "./Banner.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Payment from "../payment/Payment";
 const Banner = () => {
   return (
     <section className={InfluencerStyle.banner_section}>
@@ -19,7 +18,6 @@ const Banner = () => {
             <Link to="/influencer" className={`${InfluencerStyle.btn} btn`}>
               I'm and influencer
             </Link>
-            <Payment />
           </div>
           <div className={InfluencerStyle.exclusive_sec}>
             <div className={InfluencerStyle.exclusive_wrap}>

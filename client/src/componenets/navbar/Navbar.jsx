@@ -82,22 +82,36 @@ const Navbar = () => {
           <nav className={menu_class}>
             <ul className="menu-listing">
               <li className="menu-list">
-                <Link to="/services">Services</Link>
+                <Link to="/services" onClick={closeMenu}>
+                  Services
+                </Link>
               </li>
               <li className="menu-list">
-                <Link to="/">Industries</Link>
+                <Link to="/" onClick={closeMenu}>
+                  Industries
+                </Link>
               </li>
               <li className="menu-list">
-                <Link to="/">Who we are</Link>
+                <Link to="/" onClick={closeMenu}>
+                  Who we are
+                </Link>
               </li>
               <li className="menu-list">
-                <Link to="/">Blog</Link>
+                <Link to="/" onClick={closeMenu}>
+                  Blog
+                </Link>
               </li>
               <li className="menu-list">
-                <Link to="/">Contact Us</Link>
+                <Link to="/" onClick={closeMenu}>
+                  Contact Us
+                </Link>
               </li>
               <li className="menu-list">
-                <Link className="influencer-btn" to="/influencer" onClick={closeMenu}>
+                <Link
+                  className="influencer-btn"
+                  to="/influencer"
+                  onClick={closeMenu}
+                >
                   Influencer Marketing
                 </Link>
               </li>
