@@ -1,10 +1,53 @@
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import axios from "axios";
 import config from "../../config";
-const Course = () => {
-  const [amount, setAmount] = useState(19900); // Example amount in paise (₹10.00)
+import styles from "./Course.module.css";
+const cardsData = [
+  {
+    id: 1,
+    title: "Facebook Movies Clips Upload",
+    description:
+      "Learn how to upload movie clips on Facebook without copyright problems. This course covers everything from choosing the right clips to optimizing for engagement.",
+    image: "/images/fb_movie_course.webp",
+    amount: 199,
+  },
+  {
+    id: 2,
+    title: "1000+ Movies Clip Bundle",
+    description:
+      "1000+ movies clips bundle here without copyright problems. This clip you can upload on your fb page or profile for monetize & start earning without any issue ",
+    image: "/images/1k_movie_clip.webp",
+    amount: 199,
+  },
+  {
+    id: 3,
+    title: "700+ 2D Animation Funny Reels",
+    description:
+      "700+ 2D Animation Funny Reels without copyright problems. Add Your Logo & Upload. Go Viral Maximum time, Keep Uploading & Start Earning from today only",
+    image: "/images/2d_animation_comedy.webp",
+    amount: 199,
+  },
+  {
+    id: 4,
+    title: "40,000+ Viral Reels Bundle",
+    description:
+      "40,000+ Viral Reels Bundle without copyright problems. Add your logo in video and just upload, start earning from today only. Life Time Free Buy Now!",
+    image: "/images/40K_reels_bundle.webp",
+    amount: 199,
+  },
+  {
+    id: 5,
+    title: "40,000+ AI Motivational Reels",
+    description:
+      "40,000+ AI Motivational Reels without copyright problems. Add your logo in video and just upload, start earning from today only. Life Time Free Buy Now!",
+    image: "/images/ai_motivation.webp",
+    amount: 199,
+  },
+];
 
-  const handlePayment = async () => {
+const Course = () => {
+  const handlePayment = async (amount) => {
     try {
       const { data } = await axios.post(
         `${config.apiBaseUrl}/api/payment/createOrder`,
@@ -37,90 +80,58 @@ const Course = () => {
       console.error("Error creating order:", error);
     }
   };
+
   return (
-    <>
-      <div className="mx-auto max-w-[500px] py-20 px-4">
-        <div className="w-full p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
-          <img
-            className="w-full h-4/5 object-cover rounded-t-lg"
-            alt="Facebook Movies Clips Course"
-            src="/images/fb_movie_course.webp"
-          />
-          <div className="p-4">
-            <h2 className="text-3xl md:text-4xl text-black font-semibold">
-              Facebook Movies Clips Upload
-            </h2>
-            <p className="text-gray-600 text-xl mt-2 mb-3">
-              Learn how to uploading movie clips on Facebook without copyright
-              problem. This course covers everything from choosing the right
-              clips to optimizing for engagement.
-            </p>
-            <div className="space-y-2">
-              <div className="flex gap-2 items-center">
-                <svg
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  className="w-5 h-5 text-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clipRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fillRule="evenodd"
-                  ></path>
-                </svg>
-                <span className="text-gray-950 text-xl">
-                  Identify Engaging Clips
-                </span>
+    <div className={styles["course-wrap"]}>
+      <div className="container py-1 md:py-2 lg:my-5">
+        <motion.h3
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.5 }}
+          className="mt-5 mb-16 text-5xl uppercase text-center leading-snug"
+        >
+          Social Media Video, Clips & Bundle
+          <p className="text-xl text-white font-medium mt-4">
+            Explore our latest video courses and bundles for social media
+            content creation - Life Time Free.
+          </p>
+        </motion.h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {cardsData.map((card) => (
+            <motion.div
+              key={card.id}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="h-[490px] bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-in-out"
+            >
+              <img
+                className="w-full h-[310px] object-top"
+                src={card.image}
+                alt={card.title}
+              />
+              <div className="p-4">
+                <h2 className="text-3xl lg:text-3xl font-semibold text-gray-900 mb-2">
+                  {card.title}
+                </h2>
+                <p className="text-2xl text-gray-700">{card.description}</p>
+                <div className="flex justify-between items-center mt-4">
+                  <button
+                    onClick={() => handlePayment(card.amount)}
+                    className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-2xl md:text-3xl font-medium shadow-md hover:from-purple-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    Buy Now
+                  </button>
+                  <span className="text-4xl font-bold text-gray-900">
+                    ₹{card.amount}
+                  </span>
+                </div>
               </div>
-              <div className="flex gap-2 items-center">
-                <svg
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  className="w-5 h-5 text-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clipRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fillRule="evenodd"
-                  ></path>
-                </svg>
-                <span className="text-gray-950 text-xl">
-                  Optimize for Engagement
-                </span>
-              </div>
-              <div className="flex gap-2 items-center">
-                <svg
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  className="w-5 h-5 text-blue-500"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clipRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    fillRule="evenodd"
-                  ></path>
-                </svg>
-                <span className="text-gray-950 text-xl">
-                  Copyright Compliance
-                </span>
-              </div>
-            </div>
-            <div className="flex justify-between items-center mt-4">
-              <button
-                onClick={handlePayment}
-                class="ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 inline-flex items-center justify-center px-12 py-3 border-0 rounded-full text-xl md:text-2xl font-medium text-white bg-gradient-to-l from-blue-500 to-purple-600 shadow-lg hover:from-purple-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Buy Now
-              </button>
-              <span className="text-3xl md:text-4xl text-gray-900 font-bold ml-4">Amount: ₹{amount / 100}</span>
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

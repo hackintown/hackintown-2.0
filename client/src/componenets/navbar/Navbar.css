@@ -61,7 +61,7 @@
 /* ----- animations--------- */
 /* clicked */
 .burger-bar.clicked:nth-child(1) {
-  transform: rotate(45deg) translate(0.5em, 0.5em);
+  transform: rotate(45deg) translate(0.3em, 0.3em);
   transition: ease-out 0.5s;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .burger-bar.clicked:nth-child(3) {
-  transform: rotate(135deg) translate(-0.5em, 0.5em);
+  transform: rotate(135deg) translate(-0.27em, 0.25em);
   transition: ease-out 0.5s;
 }
 
