@@ -11,9 +11,10 @@ const authenticateToken = require("./middleware/authenticateToken.js");
 const limiter = require("./middleware/express-rate-limit.js");
 const { connectToDatabase } = require("./utils/db.js");
 require("./config/passport.js");
-const paymentRoutes  = require("./routes/paymentRoutes.js");
-const errorHandler = require('./middleware/errorHandler.js');
+const paymentRoutes = require("./routes/paymentRoutes.js");
+const errorHandler = require("./middleware/errorHandler.js");
 const requestLogger = require("./middleware/requestLogger.js");
+const gmailRoute = require("./routes/gmailRoute.js");
 
 const app = express();
 
@@ -38,7 +39,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // MongoDB Connection
-const MONGODB_URI = config.MONGODB_URI
+const MONGODB_URI = config.MONGODB_URI;
 connectToDatabase(MONGODB_URI);
 
 //Testing the Server
@@ -52,9 +53,16 @@ app.get("/", (req, res) => {
 app.use("/api/auth", router);
 
 //Payment Routes
-app.use('/api/payment', paymentRoutes);
+app.use("/api/payment", paymentRoutes);
 app.use(errorHandler);
 app.use(requestLogger);
+
+//via-Gmail-Route
+app.use("/api", gmailRoute, (req, res) => {
+  res.status(200).json({
+    message: "The Server Is Running",
+  });
+});
 
 // Protected route example
 app.get("/protected", authenticateToken, (req, res) => {

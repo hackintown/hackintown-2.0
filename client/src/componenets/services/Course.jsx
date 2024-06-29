@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import config from "../../config";
@@ -11,6 +11,8 @@ const cardsData = [
       "Learn how to upload movie clips on Facebook without copyright problems. This course covers everything from choosing the right clips to optimizing for engagement.",
     image: "/images/fb_movie_course.webp",
     amount: 199,
+    courseLink:
+      " https://drive.google.com/file/d/1RtKBsLVp89ecOG05XsTw3y9UoICfIVq1/view?usp=drivesdk ",
   },
   {
     id: 2,
@@ -19,6 +21,8 @@ const cardsData = [
       "1000+ movies clips bundle here without copyright problems. This clip you can upload on your fb page or profile for monetize & start earning without any issue ",
     image: "/images/1k_movie_clip.webp",
     amount: 199,
+    courseLink:
+      " https://drive.google.com/file/d/1RtKBsLVp89ecOG05XsTw3y9UoICfIVq1/view?usp=drivesdk ",
   },
   {
     id: 3,
@@ -27,6 +31,8 @@ const cardsData = [
       "700+ 2D Animation Funny Reels without copyright problems. Add Your Logo & Upload. Go Viral Maximum time, Keep Uploading & Start Earning from today only",
     image: "/images/2d_animation_comedy.webp",
     amount: 199,
+    courseLink:
+      " https://drive.google.com/file/d/1RtKBsLVp89ecOG05XsTw3y9UoICfIVq1/view?usp=drivesdk ",
   },
   {
     id: 4,
@@ -35,6 +41,8 @@ const cardsData = [
       "40,000+ Viral Reels Bundle without copyright problems. Add your logo in video and just upload, start earning from today only. Life Time Free Buy Now!",
     image: "/images/40K_reels_bundle.webp",
     amount: 199,
+    courseLink:
+      " https://drive.google.com/file/d/1RtKBsLVp89ecOG05XsTw3y9UoICfIVq1/view?usp=drivesdk ",
   },
   {
     id: 5,
@@ -43,12 +51,16 @@ const cardsData = [
       "40,000+ AI Motivational Reels without copyright problems. Add your logo in video and just upload, start earning from today only. Life Time Free Buy Now!",
     image: "/images/ai_motivation.webp",
     amount: 199,
+    courseLink:
+      " https://drive.google.com/file/d/1RtKBsLVp89ecOG05XsTw3y9UoICfIVq1/view?usp=drivesdk ",
   },
 ];
 
 const Course = () => {
-  const handlePayment = async (amount) => {
+  const [gmailId, setGmailId] = useState("");
+  const handlePayment = async (amount, courseLink) => {
     try {
+      await sendCourseLinkViaEmail(gmailId, courseLink);
       const { data } = await axios.post(
         `${config.apiBaseUrl}/api/payment/createOrder`,
         { amount }
@@ -81,6 +93,20 @@ const Course = () => {
     }
   };
 
+  //Gmail-SMS
+  const sendCourseLinkViaEmail = async (gmailId, courseLink) => {
+    try {
+      const response = await axios.post(`${config.apiBaseUrl}/api/send-email`, {
+        to: gmailId,
+        subject: "Course Purchase Notification",
+        text: `${courseLink}`,
+      });
+      console.log("Email sent:", response.data);
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
   return (
     <div className={styles["course-wrap"]}>
       <div className="container py-1 md:py-2 lg:my-5">
@@ -103,7 +129,7 @@ const Course = () => {
               key={card.id}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="h-[490px] bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-in-out"
+              className=" bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-in-out"
             >
               <img
                 className="w-full h-[310px] object-top"
@@ -116,8 +142,23 @@ const Course = () => {
                 </h2>
                 <p className="text-2xl text-gray-700">{card.description}</p>
                 <div className="flex justify-between items-center mt-4">
+                  <div class="max-w-[100px] h-12 relative flex rounded-xl">
+                    <input
+                      class="peer w-full bg-transparent outline-none px-4 text-xl rounded-xl bg-white border border-[#4070f4] focus:shadow-md"
+                      type="email"
+                      value={gmailId}
+                      placeholder="Enter Gmail"
+                      onChange={(e) => setGmailId(e.target.value)}
+                    />
+                    <label
+                      class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 peer-focus:top-0 peer-focus:left-3 font-light text-xl peer-focus:text-sm peer-focus:text-[#4070f4] peer-valid:-top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#4070f4] duration-150"
+                      for="address"
+                    >
+                      Email
+                    </label>
+                  </div>
                   <button
-                    onClick={() => handlePayment(card.amount)}
+                    onClick={() => handlePayment(card.amount, card.courseLink)}
                     className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-2xl md:text-3xl font-medium shadow-md hover:from-purple-500 hover:to-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >
                     Buy Now
