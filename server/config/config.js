@@ -24,7 +24,7 @@ const config = {
     SESSION_SECRET: process.env.SESSION_SECRET,
     razorpayKeyId: process.env.RAZORPAY_KEY_ID,
     razorpayKeySecret: process.env.RAZORPAY_KEY_SECRET,
-    EMAIL_USER: process.env.EMAIL_PASS,
+    EMAIL_USER: process.env.EMAIL_USER,
     EMAIL_PASS: process.env.EMAIL_PASS,
   },
 };
