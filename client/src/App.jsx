@@ -12,6 +12,10 @@ import Login from "./componenets/login/Login";
 import Register from "./componenets/register/Register";
 import BrandContact from "./pages/BrandContact";
 import Services from "./pages/Services";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermOfUsePage from "./pages/TermOfUsePage";
+import CookiePolicyPage from "./pages/CookiePolicyPage";
+import TermsAndConditionPage from "./pages/TermsAndConditionPage";
 
 function App() {
   return (
@@ -25,6 +29,13 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/contact-us" element={<BrandContact />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-of-use" element={<TermOfUsePage />} />
+          <Route path="/cookie-policy" element={<CookiePolicyPage />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsAndConditionPage />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>
