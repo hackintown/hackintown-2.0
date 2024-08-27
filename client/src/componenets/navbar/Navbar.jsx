@@ -83,12 +83,12 @@ const Navbar = () => {
             <ul className="menu-listing">
               <li className="menu-list">
                 <Link to="/services" onClick={closeMenu}>
-                  Services
+                  Courses
                 </Link>
               </li>
               <li className="menu-list">
                 <Link to="/" onClick={closeMenu}>
-                  Industries
+                  Services
                 </Link>
               </li>
               <li className="menu-list">
