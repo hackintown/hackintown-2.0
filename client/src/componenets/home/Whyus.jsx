@@ -14,7 +14,7 @@ const Whyus = () => {
           </p>
         </div>
         <div className="image-wrap">
-          <img src="/images/why-hackintown.png" alt="zig-zag image" />
+          <img src="/images/why-hackintown.webp" alt="zig-zag image" />
         </div>
       </div>
     </section>

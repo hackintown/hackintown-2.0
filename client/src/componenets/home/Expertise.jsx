@@ -54,7 +54,7 @@ const Expertise = () => {
               <div className="expertisein-item c1">
                 <img
                   className="expertise-icons"
-                  src="/images/ex-icon1.png"
+                  src="/images/ex-icon1.webp"
                   alt="expertise-icon"
                 />
                 <span className="expertisein-item-name">Graphics</span>
@@ -64,7 +64,7 @@ const Expertise = () => {
               <div className="expertisein-item c2">
                 <img
                   className="expertise-icons"
-                  src="/images/ex-icon2.png"
+                  src="/images/ex-icon2.webp"
                   alt="expertise-icon"
                 />
                 <span className="expertisein-item-name">Websites</span>
@@ -74,7 +74,7 @@ const Expertise = () => {
               <div className="expertisein-item c3">
                 <img
                   className="expertise-icons"
-                  src="/images/ex-icon3.png"
+                  src="/images/ex-icon3.webp"
                   alt="expertise-icon"
                 />
                 <span className="expertisein-item-name">Application</span>
@@ -84,7 +84,7 @@ const Expertise = () => {
               <div className="expertisein-item c4">
                 <img
                   className="expertise-icons"
-                  src="/images/ex-icon4.png"
+                  src="/images/ex-icon4.webp"
                   alt="expertise-icon"
                 />
                 <span className="expertisein-item-name">Marketing</span>
@@ -94,7 +94,7 @@ const Expertise = () => {
               <div className="expertisein-item c5">
                 <img
                   className="expertise-icons"
-                  src="/images/ex-icon5.png"
+                  src="/images/ex-icon5.webp"
                   alt="expertise-icon"
                 />
                 <span className="expertisein-item-name">Maintenance</span>
@@ -104,7 +104,7 @@ const Expertise = () => {
               <div className="expertisein-item c6">
                 <img
                   className="expertise-icons"
-                  src="/images/ex-icon6.png"
+                  src="/images/ex-icon6.webp"
                   alt="expertise-icon"
                 />
                 <span className="expertisein-item-name">

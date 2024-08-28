@@ -32,7 +32,7 @@ export default function Banner() {
             </div>
           </div>
           <div className={styles.banner_right}>
-            <img src="/images/robort-hand.png" alt="robort_image" />
+            <img src="/images/robort-hand.webp" alt="robort_image" />
           </div>
         </div>
       </div>

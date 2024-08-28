@@ -48,7 +48,7 @@ const PlatformUse = () => {
             <div className={PlatformStyle.business_elements_details}>
               <div className={PlatformStyle.platform_item}>
                 <figure>
-                  <img src="/images/triller-image.png" alt="triller-app"/>
+                  <img src="/images/triller-image.webp" alt="triller-app"/>
                 </figure>
                 <span className={PlatformStyle.platform_item_name}>Triller</span>
                 <i className="icon icon-tiktok"></i>
@@ -58,7 +58,7 @@ const PlatformUse = () => {
             <div className={PlatformStyle.business_elements_details}>
               <div className={PlatformStyle.platform_item}>
                 <figure>
-                  <img src="/images/tiktok-image.png" alt="Tik-Tok"/>
+                  <img src="/images/tiktok-image.webp" alt="Tik-Tok"/>
                 </figure>
                 <span className={PlatformStyle.platform_item_name}>Tik Tok</span>
                 <i className="fa-brands fa-tiktok"></i>
@@ -68,7 +68,7 @@ const PlatformUse = () => {
             <div className={PlatformStyle.business_elements_details}>
               <div className={PlatformStyle.platform_item}>
                 <figure>
-                  <img src="/images/fb-image.png" alt="facebook"/>
+                  <img src="/images/fb-image.webp" alt="facebook"/>
                 </figure>
                 <span className={PlatformStyle.platform_item_name}>Facebook</span>
                 <i className="fa-brands fa-facebook"></i>
@@ -78,7 +78,7 @@ const PlatformUse = () => {
             <div className={PlatformStyle.business_elements_details}>
               <div className={PlatformStyle.platform_item}>
                 <figure>
-                  <img src="/images/instagram-image.png" alt="instagram"/>
+                  <img src="/images/instagram-image.webp" alt="instagram"/>
                 </figure>
                 <span className={PlatformStyle.platform_item_name}>Instagram</span>
                 <i className="fa-brands fa-instagram"></i>
@@ -88,7 +88,7 @@ const PlatformUse = () => {
             <div className={PlatformStyle.business_elements_details}>
               <div className={PlatformStyle.platform_item}>
                 <figure>
-                  <img src="/images/youtube-image.png" alt="youtube"/>
+                  <img src="/images/youtube-image.webp" alt="youtube"/>
                 </figure>
                 <span className={PlatformStyle.platform_item_name}>Youtube</span>
                 <i className="fa-brands fa-youtube"></i>
@@ -98,7 +98,7 @@ const PlatformUse = () => {
             <div className={PlatformStyle.business_elements_details}>
               <div className={PlatformStyle.platform_item}>
                 <figure>
-                  <img src="/images/linkedin-image.png" alt="linkedin"/>
+                  <img src="/images/linkedin-image.webp" alt="linkedin"/>
                 </figure>
                 <span className={PlatformStyle.platform_item_name}>LinkedIn</span>
                 <i className="fa-brands fa-linkedin"></i>
@@ -108,7 +108,7 @@ const PlatformUse = () => {
             <div className={PlatformStyle.business_elements_details}>
               <div className={PlatformStyle.platform_item}>
                 <figure>
-                  <img src="/images/twitter-image.png" alt="twitter"/>
+                  <img src="/images/twitter-image.webp" alt="twitter"/>
                 </figure>
                 <span className={PlatformStyle.platform_item_name}>Twitter</span>
                 <i className="fa-brands fa-twitter"></i>
@@ -118,7 +118,7 @@ const PlatformUse = () => {
             <div className={PlatformStyle.business_elements_details}>
               <div className={PlatformStyle.platform_item}>
                 <figure>
-                  <img src="/images/whatsaap-image.png" alt="whatsaap"/>
+                  <img src="/images/whatsaap-image.webp" alt="whatsaap"/>
                 </figure>
                 <span className={PlatformStyle.platform_item_name}>WhatsApp</span>
                 <i className="fa-brands fa-whatsapp"></i>
@@ -128,7 +128,7 @@ const PlatformUse = () => {
             <div className={PlatformStyle.business_elements_details}>
               <div className={PlatformStyle.platform_item}>
                 <figure>
-                  <img src="/images/pininterest-image.png" alt="pinterest"/>
+                  <img src="/images/pininterest-image.webp" alt="pinterest"/>
                 </figure>
                 <span className={PlatformStyle.platform_item_name}>Pinterest</span>
                 <i className="fa-brands fa-pinterest"></i>
@@ -138,7 +138,7 @@ const PlatformUse = () => {
             <div className={PlatformStyle.business_elements_details}>
               <div className={PlatformStyle.platform_item}>
                 <figure>
-                  <img src="/images/snapchat-image.png" alt="snapchat"/>
+                  <img src="/images/snapchat-image.webp" alt="snapchat"/>
                 </figure>
                 <span className={PlatformStyle.platform_item_name}>Snapchat</span>
                 <i className="fa-brands fa-square-snapchat"></i>

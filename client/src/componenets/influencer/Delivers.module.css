@@ -3,7 +3,7 @@
     padding: 100px 0;
 }
 .hack_deli_sec::before {
-  background: url(/images/launch-bg.png) no-repeat center center;
+  background: url(/images/launch-bg.webp) no-repeat center center;
   position: absolute;
   content: "";
   left: 0;

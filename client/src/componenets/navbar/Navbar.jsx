@@ -41,34 +41,34 @@ const Navbar = () => {
             </span>
             <div className="brands-slider">
               <figure>
-                <img src="/images/logo-01.png" />
+                <img src="/images/logo-01.webp" />
               </figure>
               <figure>
-                <img src="/images/logo-02.png" />
+                <img src="/images/logo-02.webp" />
               </figure>
               <figure>
-                <img src="/images/logo-03.png" />
+                <img src="/images/logo-03.webp" />
               </figure>
               <figure>
-                <img src="/images/logo-04.png" />
+                <img src="/images/logo-04.webp" />
               </figure>
               <figure>
-                <img src="/images/logo-05.png" />
+                <img src="/images/logo-05.webp" />
               </figure>
               <figure>
-                <img src="/images/logo-06.png" />
+                <img src="/images/logo-06.webp" />
               </figure>
               <figure>
-                <img src="/images/logo-07.png" />
+                <img src="/images/logo-07.webp" />
               </figure>
               <figure>
-                <img src="/images/logo-08.png" />
+                <img src="/images/logo-08.webp" />
               </figure>
               <figure>
-                <img src="/images/logo-09.png" />
+                <img src="/images/logo-09.webp" />
               </figure>
               <figure>
-                <img src="/images/logo-10.png" />
+                <img src="/images/logo-10.webp" />
               </figure>
             </div>
           </div>
@@ -122,34 +122,34 @@ const Navbar = () => {
               </span>
               <div className="brands-slider">
                 <figure>
-                  <img src="/images/logo-01.png" />
+                  <img src="/images/logo-01.webp" />
                 </figure>
                 <figure>
-                  <img src="/images/logo-02.png" />
+                  <img src="/images/logo-02.webp" />
                 </figure>
                 <figure>
-                  <img src="/images/logo-03.png" />
+                  <img src="/images/logo-03.webp" />
                 </figure>
                 <figure>
-                  <img src="/images/logo-04.png" />
+                  <img src="/images/logo-04.webp" />
                 </figure>
                 <figure>
-                  <img src="/images/logo-05.png" />
+                  <img src="/images/logo-05.webp" />
                 </figure>
                 <figure>
-                  <img src="/images/logo-06.png" />
+                  <img src="/images/logo-06.webp" />
                 </figure>
                 <figure>
-                  <img src="/images/logo-07.png" />
+                  <img src="/images/logo-07.webp" />
                 </figure>
                 <figure>
-                  <img src="/images/logo-08.png" />
+                  <img src="/images/logo-08.webp" />
                 </figure>
                 <figure>
-                  <img src="/images/logo-09.png" />
+                  <img src="/images/logo-09.webp" />
                 </figure>
                 <figure>
-                  <img src="/images/logo-10.png" />
+                  <img src="/images/logo-10.webp" />
                 </figure>
               </div>
             </div>
