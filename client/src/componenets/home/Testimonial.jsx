@@ -64,7 +64,7 @@ const Testimonial = () => {
             <div className="testimonial-details">
               <div className="testimonial-item">
                 <figure>
-                <img src="/images/prabhat-wildstone.jpeg" alt="triller-app" />
+                <img src="/images/prabhat-wildstone.webp" alt="triller-app" />
                 </figure>
                 <figcaption className="fig-caption">
                   <h2>Sarang Gupta</h2>

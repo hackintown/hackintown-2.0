@@ -47,7 +47,7 @@ const TopInfluencers = () => {
         <Slider {...settings}  arrows={false}>
             <div className={TopStyle.slider}>
               <Link to="/" title="">
-                <img src="/images/mr-faisu.jpeg" alt="faisu-img" />
+                <img src="/images/mr-faisu.webp" alt="faisu-img" />
                 <h2>
                   <span className={TopStyle.text_white}>
                     <h3>Mr Faisu</h3>
@@ -58,7 +58,7 @@ const TopInfluencers = () => {
             <div className={TopStyle.slider}>
               <Link to="/" title="">
                 <img
-                  src="/images/darshan-raval.jpeg"
+                  src="/images/darshan-raval.webp"
                   alt="darshan-raval-img"
                 />
                 <h2>
@@ -70,7 +70,7 @@ const TopInfluencers = () => {
             </div>
             <div className={TopStyle.slider}>
               <Link to="/" title="">
-                <img src="/images/prabhat-wildstone.jpeg" alt="" />
+                <img src="/images/prabhat-wildstone.webp" alt="" />
                 <h2>
                   <span className={TopStyle.text_white}>
                   <h3>Prabhat Chaudhari</h3>
@@ -80,7 +80,7 @@ const TopInfluencers = () => {
             </div>
             <div className={TopStyle.slider}>
               <Link to="/" title="">
-                <img src="/images/priyanka-reels.jpg" alt="" />
+                <img src="/images/priyanka-reels.webp" alt="" />
                 <h2>
                   <span className={TopStyle.text_white}>
                   <h3>Priyanka Dwivedi</h3>
@@ -90,7 +90,7 @@ const TopInfluencers = () => {
             </div>
             <div className={TopStyle.slider}>
               <Link to="/" title="">
-                <img src="/images/nimra-dominoz.jpeg" alt="" />
+                <img src="/images/nimra-dominoz.webp" alt="" />
                 <h2>
                   <span className={TopStyle.text_white}>
                   <h3>Nimra Shaikh</h3>
@@ -100,7 +100,7 @@ const TopInfluencers = () => {
             </div>
             <div className={TopStyle.slider}>
               <Link to="/" title="">
-                <img src="/images/surbhi-rathore.jpeg" alt="" />
+                <img src="/images/surbhi-rathore.webp" alt="" />
                 <h2>
                   <span className={TopStyle.text_white}>
                   <h3>Surbhi Rathore</h3>
@@ -113,7 +113,7 @@ const TopInfluencers = () => {
         <Slider {...settings} arrows={false}>
             <div className={TopStyle.slider}>
               <Link to="/" title="">
-                <img src="/images/mr-faisu.jpeg" alt="faisu-img" />
+                <img src="/images/mr-faisu.webp" alt="faisu-img" />
                 <h2>
                   <span className={TopStyle.text_white}>
                     <h3>Mr Faisu</h3>
@@ -124,7 +124,7 @@ const TopInfluencers = () => {
             <div className={TopStyle.slider}>
               <Link to="/" title="">
                 <img
-                  src="/images/darshan-raval.jpeg"
+                  src="/images/darshan-raval.webp"
                   alt="darshan-raval-img"
                 />
                 <h2>
@@ -136,7 +136,7 @@ const TopInfluencers = () => {
             </div>
             <div className={TopStyle.slider}>
               <Link to="/" title="">
-                <img src="/images/prabhat-wildstone.jpeg" alt="" />
+                <img src="/images/prabhat-wildstone.webp" alt="" />
                 <h2>
                   <span className={TopStyle.text_white}>
                   <h3>Prabhat Chaudhari</h3>
@@ -146,7 +146,7 @@ const TopInfluencers = () => {
             </div>
             <div className={TopStyle.slider}>
               <Link to="/" title="">
-                <img src="/images/priyanka-reels.jpg" alt="" />
+                <img src="/images/priyanka-reels.webp" alt="" />
                 <h2>
                   <span className={TopStyle.text_white}>
                   <h3>Priyanka Dwivedi</h3>
@@ -156,7 +156,7 @@ const TopInfluencers = () => {
             </div>
             <div className={TopStyle.slider}>
               <Link to="/" title="">
-                <img src="/images/nimra-dominoz.jpeg" alt="" />
+                <img src="/images/nimra-dominoz.webp" alt="" />
                 <h2>
                   <span className={TopStyle.text_white}>
                   <h3>Nimra Shaikh</h3>
@@ -166,7 +166,7 @@ const TopInfluencers = () => {
             </div>
             <div className={TopStyle.slider}>
               <Link to="/" title="">
-                <img src="/images/surbhi-rathore.jpeg" alt="" />
+                <img src="/images/surbhi-rathore.webp" alt="" />
                 <h2>
                   <span className={TopStyle.text_white}>
                   <h3>Surbhi Rathore</h3>

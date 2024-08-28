@@ -130,7 +130,7 @@
 /* Brand Logo Slider */
 .brand-logo::after {
   content: "";
-  background: url("/images/nav-seperater.svg");
+  background: url("/images/nav-seperater.webp");
   position: absolute;
   left: 0;
   top: 0;

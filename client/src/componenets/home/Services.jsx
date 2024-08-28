@@ -46,7 +46,7 @@ const Services = () => {
               <div className={ServicesStyle.item}>
                 <div className={ServicesStyle.service_content}>
                   <div className={ServicesStyle.service_img}>
-                    <img src="/images/meet-and-greet.svg" alt="images"/>
+                    <img src="/images/meet-and-greet.webp" alt="images"/>
                   </div>
                   <div className={ServicesStyle.service_para}>
                     <h3 className={ServicesStyle.service_title}>UI/UX Design</h3>
@@ -59,7 +59,7 @@ const Services = () => {
               <div className={ServicesStyle.item}>
                 <div className={ServicesStyle.service_content}>
                   <div className={ServicesStyle.service_img}>
-                  <img src="/images/brand-enquiry.svg" alt="images" />
+                  <img src="/images/brand-enquiry.webp" alt="images" />
                   </div>
                   <div className={ServicesStyle.service_para}>
                     <h3 className={ServicesStyle.service_title}>Web Development</h3>
@@ -72,7 +72,7 @@ const Services = () => {
               <div className={ServicesStyle.item}>
                 <div className={ServicesStyle.service_content}>
                   <div className={ServicesStyle.service_img}>
-                  <img src="/images/brand-enquiry.svg" alt="images"/>
+                  <img src="/images/brand-enquiry.webp" alt="images"/>
                   </div>
                   <div className={ServicesStyle.service_para}>
                     <h3 className={ServicesStyle.service_title}>App Development</h3>
@@ -85,7 +85,7 @@ const Services = () => {
               <div className={ServicesStyle.item}>
                 <div className={ServicesStyle.service_content}>
                   <div className={ServicesStyle.service_img}>
-                    <img src="/images/brand-enquiry.svg" alt="images"/>
+                    <img src="/images/brand-enquiry.webp" alt="images"/>
                   </div>
                   <div className={ServicesStyle.service_para}>
                     <h3 className={ServicesStyle.service_title}>Influencer Marketing</h3>
@@ -98,7 +98,7 @@ const Services = () => {
               <div className={ServicesStyle.item}>
                 <div className={ServicesStyle.service_content}>
                   <div className={ServicesStyle.service_img}>
-                    <img src="/images/brand-enquiry.svg" alt="images" />
+                    <img src="/images/brand-enquiry.webp" alt="images" />
                   </div>
                   <div className={ServicesStyle.service_para}>
                     <h3 className={ServicesStyle.service_title}>Digital Marketing</h3>
