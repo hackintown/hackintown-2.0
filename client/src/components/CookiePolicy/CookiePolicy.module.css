@@ -1,0 +1,77 @@
+/* Dark background with sleek design */
+.background {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header styling */
+.header {
+  background-color: #111;
+  padding: 32px 16px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.subHeading {
+  color: #aaa;
+  font-size: 2rem;
+}
+
+/* Main content */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+
+.section {
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #f0f0f0;
+}
+
+.mutedText {
+  font-size: 1.8rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.subTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}

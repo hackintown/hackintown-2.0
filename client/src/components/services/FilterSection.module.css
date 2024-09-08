@@ -1,0 +1,33 @@
+.filterContainer {
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: left;
+}
+
+.filterOptions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.active {
+  background-color: #f39c12;
+}
