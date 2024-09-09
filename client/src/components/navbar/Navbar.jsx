@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import { useState } from "react";
 import { FaCartPlus } from "react-icons/fa6";
+import PropTypes from "prop-types";
 
 const Navbar = ({ cart, setShow }) => {
   //to change the burger classes
@@ -31,6 +32,10 @@ const Navbar = ({ cart, setShow }) => {
       setIsMenuClicked(false);
     }
   };
+  const goToCart = () => {
+    setShow(false);
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -43,47 +48,25 @@ const Navbar = ({ cart, setShow }) => {
               Over 100+ delighted clients globally to Fortune 100 companies.
             </span>
             <div className="brands-slider">
-              <figure>
-                <img src="/images/logo-01.webp" />
-              </figure>
-              <figure>
-                <img src="/images/logo-02.webp" />
-              </figure>
-              <figure>
-                <img src="/images/logo-03.webp" />
-              </figure>
-              <figure>
-                <img src="/images/logo-04.webp" />
-              </figure>
-              <figure>
-                <img src="/images/logo-05.webp" />
-              </figure>
-              <figure>
-                <img src="/images/logo-06.webp" />
-              </figure>
-              <figure>
-                <img src="/images/logo-07.webp" />
-              </figure>
-              <figure>
-                <img src="/images/logo-08.webp" />
-              </figure>
-              <figure>
-                <img src="/images/logo-09.webp" />
-              </figure>
-              <figure>
-                <img src="/images/logo-10.webp" />
-              </figure>
+              {Array.from({ length: 10 }, (_, i) => (
+                <figure key={i}>
+                  <img
+                    src={`/images/logo-0${i + 1}.webp`}
+                    alt={`Brand Logo ${i + 1}`}
+                  />
+                </figure>
+              ))}
             </div>
           </div>
           <div className="mbl-right-content">
             <ul className="mbl-cart">
-              {location.pathname === "/services" && (
-                <li className="menu-list">
-                  <button className="icon-cart" onClick={() => setShow(false)}>
+              {location.pathname !== "/" && (
+                <Link to="/services/cart">
+                  <button className="icon-cart" onClick={goToCart}>
                     <FaCartPlus size={25} fill="#fff" />
                   </button>
                   <span className="item-count">{cart}</span>
-                </li>
+                </Link>
               )}
             </ul>
             <div className="burger-menu" onClick={updateMenu}>
@@ -136,12 +119,14 @@ const Navbar = ({ cart, setShow }) => {
                   Influencer Marketing
                 </Link>
               </li>
-              {location.pathname === "/services" && (
+              {location.pathname !== "/" && (
                 <li className="menu-list desktop-cart">
-                  <button className="icon-cart" onClick={() => setShow(false)}>
-                    <FaCartPlus size={25} fill="#fff" />
-                  </button>
-                  <span className="item-count">{cart}</span>
+                  <Link to="/services/cart">
+                    <button className="icon-cart" onClick={goToCart}>
+                      <FaCartPlus size={25} fill="#fff" />
+                    </button>
+                    <span className="item-count">{cart}</span>
+                  </Link>
                 </li>
               )}
             </ul>
@@ -187,6 +172,11 @@ const Navbar = ({ cart, setShow }) => {
       </div>
     </header>
   );
+};
+
+Navbar.propTypes = {
+  cart: PropTypes.number.isRequired,
+  setShow: PropTypes.func.isRequired,
 };
 
 export default Navbar;

@@ -1,7 +1,7 @@
-import React from "react";
 import ProductCard from "../components/services/ProductCard";
 import ProductBanner from "../components/services/ProductBanner";
 import styles from "./DigitalProduct.module.css";
+import PropTypes from "prop-types";
 
 const Services = ({ handleClick }) => {
   return (
@@ -23,5 +23,7 @@ const Services = ({ handleClick }) => {
     </main>
   );
 };
-
+Services.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
 export default Services;

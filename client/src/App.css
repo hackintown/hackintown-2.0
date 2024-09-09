@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.warning-message {
+    position: fixed;
+    top: 20px; /* Adjusted for better visibility */
+    right: 20px;
+    background-color: #f8d7da; /* Light red background for better contrast */
+    color: #721c24; /* Dark red color for the text */
+    padding: 15px;
+    border: 1px solid #f5c6cb; /* Slightly darker border for contrast */
+    border-radius: 8px; /* More rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    z-index: 1000;
+    font-size: 16px;
+    font-weight: 500; /* Slightly bolder text */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and icon */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade out effect */
+  }
+  
+  .warning-message.hidden {
+    opacity: 0;
+  }
+  

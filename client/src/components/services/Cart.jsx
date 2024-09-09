@@ -3,7 +3,7 @@ import styles from "./Cart.module.css"; // Import the CSS module
 import PropTypes from "prop-types";
 import Button from "../ui/Button/Button";
 
-const Cart = ({ cart, setCart, handleChange }) => {
+const Cart = ({ cart, handleChange }) => {
   const [price, setPrice] = useState(0);
   const [tax, setTax] = useState(0);
   const [total, setTotal] = useState(0);

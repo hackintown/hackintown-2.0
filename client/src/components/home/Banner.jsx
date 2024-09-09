@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./Banner.module.css";
 import { Link } from "react-router-dom";
 export default function Banner() {
@@ -7,9 +7,9 @@ export default function Banner() {
       <div className={`${styles.banner_bg} ${styles.gradient_color1}`}></div>
       <div className={`${styles.banner_bg} ${styles.gradient_color2}`}></div>
       <div className="container">
-        <div class={styles.banner_content}>
+        <div className={styles.banner_content}>
           <div className={styles.banner_left}>
-            <div class={styles.title}>
+            <div className={styles.title}>
               <h1>
                 TRANSFORMING
                 <br />

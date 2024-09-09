@@ -76,12 +76,46 @@ function App() {
         </Helmet>
         <BrowserRouter>
           <Navbar cart={cart.length} setShow={setShow} />
+          {warning && (
+            <div className={`warning-message ${!warning ? "hidden" : ""}`}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="w-5 h-5"
+                style={{ color: "#721c24" }}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M11 9v2m0 4h.01M21 12.3a9.97 9.97 0 00-1.577-5.41L12.9 12.9a9.97 9.97 0 00-5.41-1.577M12.3 3a9.97 9.97 0 00-5.41 1.577L12.3 12.3a9.97 9.97 0 001.577-5.41"
+                />
+              </svg>
+              <span>Item is already in the cart!</span>
+            </div>
+          )}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/influencer" element={<Influencer />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/contact-us" element={<BrandContact />} />
+            <Route
+              path="/services"
+              element={<Services handleClick={handleClick} />}
+            />
+            <Route
+              path="/services/cart"
+              element={
+                <CartPage
+                  cart={cart}
+                  setCart={setCart}
+                  handleChange={handleChange}
+                />
+              }
+            />
             {show ? (
               <Route
                 path="/services"
@@ -89,7 +123,7 @@ function App() {
               />
             ) : (
               <Route
-                path="*"
+                path="/services/cart"
                 element={
                   <CartPage
                     cart={cart}

@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
 import styles from "./ProductBanner.module.css";
@@ -6,31 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
+import PropTypes from "prop-types";
+import { ProductBannerData } from "./ProductBannerData";
 
-// Product data for the slider (You can use your ProductData.js)
-const productData = [
-  {
-    id: 1,
-    image:
-      "https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/3c613a3254ca93d1.png?q=20",
-    title: "Premium Product 1",
-    description: "High-Quality Downloadable Item",
-  },
-  {
-    id: 2,
-    image:
-      "https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/61775218f4487fe8.jpg?q=20",
-    description: "Learn new skills with this exclusive product.",
-  },
-  {
-    id: 3,
-    image:
-      "https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/ab9ccf8a8ad6a05f.jpg?q=20",
-    title: "Ultimate Product 3",
-    description: "An ultimate experience with this product.",
-  },
-];
-
+// eslint-disable-next-line react/prop-types
 const NextArrow = ({ onClick }) => {
   return (
     <div className={styles.nextArrow} onClick={onClick}>
@@ -40,6 +18,7 @@ const NextArrow = ({ onClick }) => {
 };
 
 // Custom Prev Arrow
+// eslint-disable-next-line react/prop-types
 const PrevArrow = ({ onClick }) => {
   return (
     <div className={styles.prevArrow} onClick={onClick}>
@@ -66,7 +45,7 @@ const ProductBanner = () => {
   return (
     <div className={styles.bannerContainer}>
       <Slider {...sliderSettings}>
-        {productData.map((product) => (
+        {ProductBannerData.map((product) => (
           <motion.div
             key={product.id}
             className={styles.slide}
@@ -86,7 +65,7 @@ const ProductBanner = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
               >
-                {product.title}
+                {product.title || "Untitled Product"}
               </motion.h2>
               <motion.p
                 className={styles.description}
@@ -103,5 +82,14 @@ const ProductBanner = () => {
     </div>
   );
 };
-
+ProductBanner.propTypes = {
+  ProductBannerData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      image: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ).isRequired,
+};
 export default ProductBanner;

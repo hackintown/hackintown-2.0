@@ -9,6 +9,7 @@
 .slide {
   position: relative;
   display: flex;
+  height: 200px;
   align-items: center;
   justify-content: center;
 }
@@ -17,7 +18,7 @@
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  max-height: 400px;
+  height: 100%;
 }
 
 .textOverlay {
