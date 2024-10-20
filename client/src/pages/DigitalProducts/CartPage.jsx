@@ -1,7 +1,6 @@
-import Cart from "../../components/services/Cart";
-
 import PropTypes from "prop-types";
-import EmptyCart from "../../components/services/EmptyCart";
+import Cart from "../../components/DigitalProduct/Cart";
+import EmptyCart from "../../components/DigitalProduct/EmptyCart";
 const CartPage = ({ cart, setCart, handleChange }) => {
   return (
     <div>

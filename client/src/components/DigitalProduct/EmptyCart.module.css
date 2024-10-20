@@ -1,0 +1,130 @@
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+}
+.card {
+  background-color: #ffffff; /* White background for the card */
+  padding: 2rem;
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%;
+  text-align: center;
+}
+
+.heading {
+  font-size: 3rem; /* Large text for the heading */
+  font-weight: 600; /* Semi-bold text */
+  color: #333333; /* Dark gray text color */
+  margin-bottom: 1rem; /* Space below the heading */
+}
+
+.message {
+  font-size: 1.5rem; /* Standard text size */
+  color: #666666; /* Medium gray text color */
+  margin-bottom: 1.5rem; /* Space below the message */
+}
+
+.button {
+  background-color: #3b82f6; /* Blue background color */
+  color: #ffffff; /* White text color */
+  padding: 0.5rem 1rem; /* Padding inside the button */
+  border: none;
+  font-weight: 400;
+  border-radius: 0.375rem; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.button:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+}
+
+.emptyCartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.emptyCartContent {
+  text-align: center;
+  padding: 3rem;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  max-width: 550px;
+  width: 90%;
+}
+
+.emptyCartIconWrapper {
+  background-color: #ebf8ff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 2rem;
+}
+
+.emptyCartIcon {
+  font-size: 4rem;
+  color: #3182ce;
+}
+
+.emptyCartHeading {
+  font-size: 2.4rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.emptyCartMessage {
+  font-size: 1.6rem;
+  color: #718096;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.emptyCartButton {
+  background-color: #3182ce;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyCartButton:hover {
+  background-color: #2c5282;
+  transform: translateY(-2px);
+}
+
+.buttonIcon {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .emptyCartContent {
+    padding: 2rem;
+  }
+
+  .emptyCartHeading {
+    font-size: 2.2rem;
+  }
+
+  .emptyCartMessage {
+    font-size: 1.4rem;
+  }
+
+  .emptyCartButton {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.6rem;
+  }
+}

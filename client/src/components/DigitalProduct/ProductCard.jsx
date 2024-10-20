@@ -1,6 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styles from "./ProductCard.module.css";
-import ProductData from "../services/productData";
+import ProductData from "./productData";
 import { FaWhatsapp } from "react-icons/fa";
 import Button from "../ui/Button/Button";
 import { IoIosStar } from "react-icons/io";
@@ -11,7 +12,14 @@ const ProductCard = ({ handleClick }) => {
     <>
       <div className={styles.productGrid}>
         {ProductData.map((product) => (
-          <div className={styles.card} key={product.id}>
+          <motion.div
+            className={styles.card}
+            key={product.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ y: -5 }}
+          >
             <img
               className={styles.image}
               src={product.image}
@@ -54,7 +62,7 @@ const ProductCard = ({ handleClick }) => {
                   className={styles.whatsapp}
                   onClick={() => {
                     const message = `Hi, I want to order ${product.title}`;
-                    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(
+                    const whatsappUrl = `https://wa.me/919289905136?text=${encodeURIComponent(
                       message
                     )}`;
                     window.open(whatsappUrl, "_blank");
@@ -64,7 +72,7 @@ const ProductCard = ({ handleClick }) => {
                 </Button>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </>

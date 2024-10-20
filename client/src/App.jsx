@@ -10,12 +10,12 @@ import Footer from "./components/footer/Footer";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import BrandContact from "./pages/BrandContact";
-import Services from "./pages/Services";
+import DigitalProductPage from "./pages/DigitalProducts/DigitalProductPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermOfUsePage from "./pages/TermOfUsePage";
 import CookiePolicyPage from "./pages/CookiePolicyPage";
 import TermsAndConditionPage from "./pages/TermsAndConditionPage";
-import CartPage from "./pages/DigitalProductsPage/CartPage";
+import CartPage from "./pages/DigitalProducts/CartPage";
 import PropTypes from "prop-types";
 
 function App() {
@@ -103,8 +103,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/contact-us" element={<BrandContact />} />
             <Route
-              path="/services"
-              element={<Services handleClick={handleClick} />}
+              path="/digital-products"
+              element={<DigitalProductPage handleClick={handleClick} />}
             />
             <Route
               path="/services/cart"
@@ -118,12 +118,12 @@ function App() {
             />
             {show ? (
               <Route
-                path="/services"
-                element={<Services handleClick={handleClick} />}
+                path="/digital-products"
+                element={<DigitalProductPage handleClick={handleClick} />}
               />
             ) : (
               <Route
-                path="/services/cart"
+                path="/digital-products/cart"
                 element={
                   <CartPage
                     cart={cart}

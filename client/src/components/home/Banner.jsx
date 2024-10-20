@@ -1,4 +1,3 @@
-
 import styles from "./Banner.module.css";
 import { Link } from "react-router-dom";
 export default function Banner() {
@@ -23,7 +22,7 @@ export default function Banner() {
               content, and laser_sharp paid media targeting.
             </p>
             <div className={styles.btn_wrap}>
-              <Link to="/services" className={`${styles.btn} btn`}>
+              <Link to="/digital-products" className={`${styles.btn} btn`}>
                 Digital Products
               </Link>
               <Link to="/influencer" className={`${styles.btn} btn`}>

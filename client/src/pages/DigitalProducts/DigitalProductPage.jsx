@@ -1,9 +1,10 @@
-import ProductCard from "../components/services/ProductCard";
-import ProductBanner from "../components/services/ProductBanner";
+import React from "react";
+import ProductBanner from "../../components/DigitalProduct/ProductBanner";
+import ProductCard from "../../components/DigitalProduct/ProductCard";
 import styles from "./DigitalProduct.module.css";
 import PropTypes from "prop-types";
 
-const Services = ({ handleClick }) => {
+const DigitalProductPage = ({ handleClick }) => {
   return (
     <main className={styles.digitalProduct}>
       <div className={styles.container}>
@@ -23,7 +24,8 @@ const Services = ({ handleClick }) => {
     </main>
   );
 };
-Services.propTypes = {
+DigitalProductPage.propTypes = {
   handleClick: PropTypes.func.isRequired,
 };
-export default Services;
+
+export default DigitalProductPage;

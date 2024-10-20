@@ -81,7 +81,7 @@ const Navbar = ({ cart, setShow }) => {
             <ul className="menu-listing">
               <li className="menu-list">
                 <Link
-                  to="/services"
+                  to="/digital-products"
                   onClick={() => {
                     closeMenu();
                     setShow(true);
